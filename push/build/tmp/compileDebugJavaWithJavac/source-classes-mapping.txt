@@ -1,0 +1,2 @@
+com/umeng/message/lib/BuildConfig.java
+ com.umeng.message.lib.BuildConfig

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.unistrong.api.maps.MapView
+        android:id="@+id/mapview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.unistrong.api.maps.MapView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+          <LinearLayout
+              android:layout_gravity="center_vertical"
+              android:layout_marginLeft="15dp"
+              android:id="@+id/lin_serach"
+              android:layout_width="match_parent"
+              android:layout_weight="1"
+              android:background="@drawable/background_serarch"
+              android:layout_height="30dp">
+              <ImageView
+                  android:layout_width="15dp"
+                  android:layout_centerVertical="true"
+                  android:layout_marginLeft="30dp"
+                  android:layout_gravity="center_vertical"
+                  android:layout_height="15dp"
+                  android:src="@drawable/icon_seash"></ImageView>
+              <TextView
+                  android:layout_marginLeft="10dp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_vertical"
+                  android:text="搜索">
+              </TextView>
+          </LinearLayout>
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:id="@+id/iv_add_camera"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_width="50dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/icon_add_camera"
+            android:layout_marginRight="5dp"
+            android:layout_height="50dp"></ImageView>
+    </LinearLayout>
+
+    <com.allinlink.platformapp.video_project.widget.MapDialogLinerLayout
+        android:id="@+id/lin_dialogmap"
+        android:focusable="true"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.allinlink.platformapp.video_project.widget.MapDialogLinerLayout>
+</RelativeLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/c5"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/activity_main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:theme="@style/AppTheme.PopupOverlay"
+        android:background="@color/colorPrimaryDark"
+        android:minHeight="?attr/actionBarSize"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_10"
+        android:textColor="@color/black"
+        android:text="服务设置"></TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/c6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="服务地址:"></TextView>
+
+        <com.unistrong.view.EditTextWithDel
+            android:id="@+id/et_ip"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:background="@color/c5"
+            android:hint="请输入服务地址"
+            android:digits="1234567890.htps:/"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color_A3"
+            android:textCursorDrawable="@drawable/edit_cursor_color"
+            android:textSize="@dimen/ts_14px" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginLeft="@dimen/dimen_24"
+        android:layout_marginRight="@dimen/dimen_24"
+        android:background="@color/c6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="服务端口:"></TextView>
+
+        <com.unistrong.view.EditTextWithDel
+            android:id="@+id/et_port"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:background="@color/c5"
+            android:hint="请输入服务端口"
+            android:inputType="number"
+            android:maxLength="4"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color_A3"
+            android:textCursorDrawable="@drawable/edit_cursor_color"
+            android:textSize="@dimen/ts_14px" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/c6" />
+
+    <com.unistrong.view.RippleView
+        android:id="@+id/rv_enter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_44"
+        android:layout_marginLeft="@dimen/dimen_35"
+        android:layout_marginTop="@dimen/dimen_26"
+        android:layout_marginRight="@dimen/dimen_35"
+        android:layout_marginBottom="@dimen/dimen_10"
+        android:background="@drawable/login_gray">
+
+        <TextView
+            android:id="@+id/tv_enter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/setting"
+            android:textColor="@color/c20"
+            android:textSize="@dimen/ts_16px" />
+    </com.unistrong.view.RippleView>
+
+    <TextView
+        android:id="@+id/history_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_10"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:text="历史记录"></TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>

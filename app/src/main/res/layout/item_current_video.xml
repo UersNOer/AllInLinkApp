@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LinearLayout"
+    android:id="@+id/lin_back"
+    android:layout_width="match_parent">
+
+    <CheckBox
+        android:visibility="gone"
+        android:id="@+id/cb_check"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:checked="false"></CheckBox>
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/TextView_normal"></TextView>
+</LinearLayout>

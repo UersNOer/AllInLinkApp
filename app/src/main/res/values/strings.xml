@@ -1,3 +1,25 @@
 <resources>
-    <string name="app_name">AllInLinkApp</string>
+    <string name="app_name" translatable="false">allinlinkapp</string>
+
+    <string name="account" translatable="false">账号</string>
+    <string name="password" translatable="false">密码</string>
+    <string name="confirm_password" translatable="false">确认密码</string>
+    <string name="input_username" translatable="false">请输入手机号/用户名</string>
+    <string name="user_edit_password" translatable="false">请输入登录密码</string>
+    <string name="username_error" translatable="false">只可输入中文、大小写字母、下划线和数字</string>
+    <string name="password_error" translatable="false">请输入密码</string>
+    <string name="login_success" translatable="false">登录成功</string>
+    <string name="login_fail" translatable="false">登录失败，请重试…</string>
+    <string name="control_fail" translatable="false">操作失败，请重试…</string>
+    <string name="login" translatable="false">登录</string>
+    <string name="acticity_datum" translatable="false">个人资料</string>
+    <string name="activity_uppassword" translatable="false">修改密码</string>
+    <string name="activity_about" translatable="false">关于</string>
+    <string name="activity_addcamera" translatable="false">添加设备</string>
+    <string name="activity_searchcamera" translatable="false">查询通道</string>
+    <string name="activity_addcamearinfo" translatable="false">添加通道</string>
+    <string name="setting" translatable="false">设置</string>
+    <string name="ip_error" translatable="false">服务地址格式不正确</string>
+    <string name="port_error" translatable="false">服务端口格式不正确</string>
+    <string name="setting_success" translatable="false">设置成功</string>
 </resources>

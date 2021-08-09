@@ -1,0 +1,81 @@
+import java.text.SimpleDateFormat
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 2
+        versionName "1.0.0"
+        ndk {
+            abiFilters "armeabi","armeabi-7a"
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+    buildTypes {
+        release {
+
+            minifyEnabled true
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //忽略引用包中的错误
+    lintOptions {
+
+        abortOnError false
+
+    }
+
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+    implementation project(path: ':searchsdk')
+
+
+}
+
+def buildTime() {
+    def df = new SimpleDateFormat("yyyyMMdd")
+    df.setTimeZone(TimeZone.getDefault())
+    return df.format(new Date())
+}
+
+task clearJar(type: Delete) {
+    delete 'build/outputs/jar/mapsdk.zip'
+}
+//拷贝本工程包
+task copyLoc(type: Copy) {
+    from('build/intermediates/bundles/default/')
+    into('build/outputs/jar/')
+    exclude('test/', 'BuildConfig.class', 'R.class')
+    include('classes.jar')
+    rename('classes.jar', 'mapsdk.zip')
+}
+//解压缩jar
+task unzipclass(type: Copy) {
+    from zipTree('build/outputs/jar/mapsdk.zip')
+    into("build/outputs/class/")
+}
+//拷贝assets
+task copyassets(type: Copy) {
+    from('build/intermediates/bundles/default/assets/')
+    into("build/outputs/class/assets/")
+}
+//重新打包
+task makeJar(type: org.gradle.api.tasks.bundling.Jar) {
+    //指定生成的jar名
+    baseName 'Leador_MapSDK_V1.12.0_' + buildTime()
+    //从哪里打包class文件
+    from('build/outputs/class/')
+    //打包到jar后的目录结构
+    into('/')
+    //去掉不需要打包的目录和文件
+    exclude('test/', 'com/leador/map/BuildConfig.class', 'R.class')
+    //去掉R$开头的文件
+    exclude { it.name.startsWith('R$'); }
+}
+makeJar.dependsOn(clearJar, build, copyLoc, unzipclass, copyassets)

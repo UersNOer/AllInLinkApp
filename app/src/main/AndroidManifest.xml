@@ -1,6 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.allinlink.platformapp">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" /> <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+
+
 
     <application
         android:allowBackup="true"
@@ -8,8 +72,9 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:usesCleartextTraffic="true"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AllInLinkApp">
+        android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,6 +82,59 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+
+
+
+
+        <activity android:name=".video_project.ui.activity.OrderActivity"></activity>
+        <activity android:name=".video_project.ui.activity.CollectActivity" />
+        <activity android:name=".video_project.ui.activity.MapActivity" />
+        <activity android:name=".video_project.ui.activity.WarningActivity" />
+        <activity android:name=".video_project.ui.activity.SerachChannelActivity" />
+        <activity android:name=".video_project.ui.activity.SelectTimeActivity" />
+        <activity android:name=".video_project.ui.activity.SerachVideoActivity" />
+        <activity android:name=".video_project.ui.activity.SingleVideoActivity" />
+        <activity android:name=".video_project.ui.activity.AddCameraInfoActivity" />
+        <activity android:name=".video_project.ui.activity.AddCameraActivity" />
+        <activity android:name=".video_project.ui.activity.SearchCameraActivity" />
+        <activity android:name=".video_project.ui.activity.AboutActivity" />
+        <activity android:name=".video_project.ui.activity.UpPasswordActivity" />
+        <activity android:name=".video_project.ui.activity.UserDatumActivity" />
+        <activity android:name=".video_project.ui.activity.IPSettingActivity" />
+        <activity android:name=".video_project.ui.activity.SplashActivity">
+        </activity>
+        <activity
+            android:name=".video_project.ui.activity.UniMainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            />
+        <activity android:name=".video_project.ui.activity.LoginActivity" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="d0c174db6d23b88c00aea85d5b88ecd2" />
+        <meta-data
+            android:name="uni_app_type"
+            android:value="111" /> <!-- 网络日志开关 -->
+        <meta-data
+            android:name="NETWORK_LOG"
+            android:value="true" />
+        <activity
+            android:name="net.vpnsdk.vpn.L3VpnStartDialog"
+            android:excludeFromRecents="true"
+            android:theme="@style/CustomNoDisplay" />
+
+        <service
+            android:name="net.vpnsdk.vpn.SDKVpnService"
+            android:exported="false"
+            android:permission="android.permission.BIND_VPN_SERVICE"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="net.vpnsdk.vpn.VPN_SERVICE" />
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

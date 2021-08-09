@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.SingleVideoActivity">
+    <com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer
+        android:id="@+id/detail_player"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
+    <com.allinlink.platformapp.video_project.widget.VideoControlView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.allinlink.platformapp.video_project.widget.VideoControlView>
+</LinearLayout>

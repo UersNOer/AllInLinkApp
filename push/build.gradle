@@ -1,0 +1,59 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 29
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+
+    android {
+        lintOptions {
+            abortOnError false
+        }
+    }
+}
+
+dependencies {
+implementation files('libs/umeng-common-9.3.0.jar')
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+//    api(name: 'umeng-asms-armeabi-v1.1.3', ext: 'aar')
+//    api(name: 'umeng-crash-armeabi-v0.0.5', ext: 'aar')
+
+//    provided files('libs/umeng-common-2.2.2.jar')
+//    provided files('libs/umeng-analytics-9.2.0.jar')
+//    provided files('libs/umeng-common-9.2.0.jar')
+}
+
+

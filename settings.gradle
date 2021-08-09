@@ -3,3 +3,11 @@ include ':app'
 include ':netword'
 include ':baseui'
 include ':uni_utils'
+
+
+//VideoProject
+include ':push'
+include ':uninetwork'
+include ':vpn'
+include ':mapsdk'
+include ':searchsdk'

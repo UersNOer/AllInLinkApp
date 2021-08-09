@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.allinlink.platformapp.video_project.ui.activity.SelectTimeActivity">
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:id="@+id/iv_back"
+            android:text="选择时间"></TextView>
+        <ImageView
+            android:id="@+id/iv_collect"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/control_left_unselect"></ImageView>
+        <Button
+            android:id="@+id/bt_querychannel"
+            android:text="完成"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_width="60dp"
+            style="@style/BlueButton"></Button>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#3665EA"
+
+        android:textColor="#ff0000">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="18dp"
+            android:src="@drawable/icon_tips"></ImageView>
+        <TextView
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:text="录像查询时长做多为一天"
+            android:layout_marginLeft="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="50dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:text="开始时间"></TextView>
+
+            <TextView
+                android:id="@+id/tv_starttime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text=""></TextView>
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/common_arrow_right"
+                ></ImageView>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginLeft="65dp"
+            android:background="#ECEDED"
+            android:layout_height="0.5dp"></View>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:text="开始时间"></TextView>
+
+            <TextView
+                android:id="@+id/tv_endtime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text=""></TextView>
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/common_arrow_right"
+                ></ImageView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="15dp"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_channel"
+        android:text="ssss"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TextView>
+    <LinearLayout
+
+        style="@style/LinearLayout">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_marginLeft="15dp"
+            android:text="通道编码*"
+            style="@style/TextView_normal">
+        </TextView>
+        <TextView
+            android:id="@+id/lin_device_code"
+
+            style="@style/UpdataEdit"
+            android:background="@null"
+            android:hint="请输入通道编码"></TextView>
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:visibility="gone"
+
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_eyeclose"></ImageView>
+    </LinearLayout>
+    <LinearLayout
+        style="@style/LinearLayout">
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_marginLeft="15dp"
+            android:text="通道名称*"
+            style="@style/TextView_normal">
+        </TextView>
+        <TextView
+            android:id="@+id/lin_device_name"
+
+            style="@style/UpdataEdit"
+            android:background="@null"
+            android:hint="请输入通道名称"></TextView>
+        <ImageView
+            android:layout_width="16dp"
+            android:visibility="gone"
+
+            android:layout_height="16dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_eyeclose"></ImageView>
+    </LinearLayout>
+    <LinearLayout
+        style="@style/LinearLayout">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_marginLeft="15dp"
+            android:text="摄像机类型*"
+            style="@style/TextView_normal">
+        </TextView>
+        <TextView
+            android:id="@+id/lin_device_type"
+
+            style="@style/UpdataEdit"
+            android:background="@null"
+            android:hint="请输入摄像机类型"></TextView>
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:visibility="gone"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_eyeclose"></ImageView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lin_location"
+        style="@style/LinearLayout"
+        >
+        <TextView
+            android:background="@color/white"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="1dp"
+            android:text="通道位置*"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:gravity="center_vertical"
+            android:layout_height="50dp"
+            style="@style/TextView_normal"></TextView>
+        <TextView
+            android:id="@+id/tv_location"
+            android:background="@color/white"
+            android:layout_weight="12"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="1dp"
+            android:text="点击选择坐标"
+            android:layout_width="0dp"
+            android:gravity="center_vertical"
+            android:layout_height="50dp"
+            style="@style/TextView_normal"></TextView>
+    </LinearLayout>
+
+
+
+</LinearLayout>

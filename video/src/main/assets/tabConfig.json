@@ -1,0 +1,29 @@
+{
+  "tab_info": [
+    {
+      "tab_name": "地图",
+      "class_name": "com.unistrong.video.ui.frament.MapFragment",
+      "tab_drawable_normal": "tab_map_normal",
+      "tab_drawable_select": "tab_map_select"
+    },
+    {
+      "tab_name": "实时",
+      "class_name": "com.unistrong.video.ui.frament.DeviceFragment",
+      "tab_drawable_normal": "tab_equipment_normal",
+      "tab_drawable_select": "tab_equipment_select"
+    },
+    {
+      "tab_name": "录像",
+      "class_name": "com.unistrong.video.ui.frament.DataFragment",
+      "tab_drawable_normal": "tab_data_normal",
+      "tab_drawable_select": "tab_data_select"
+    },
+    {
+      "tab_name": "我的",
+      "class_name": "com.unistrong.video.ui.frament.PersonFragment",
+      "tab_drawable_normal": "tab_workbench_normal",
+      "tab_drawable_select": "tab_workbench_select"
+    }
+  ],
+  "default_tab": 1
+}
