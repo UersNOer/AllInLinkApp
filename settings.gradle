@@ -1,0 +1,5 @@
+rootProject.name = "AllInLinkApp"
+include ':app'
+include ':netword'
+include ':baseui'
+include ':uni_utils'
