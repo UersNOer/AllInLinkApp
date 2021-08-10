@@ -1,0 +1,311 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.umeng.message.lib"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+8-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:7:5-67
+11-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:7:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:8:5-79
+12-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:8:22-76
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+13-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:9:5-76
+13-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:9:22-73
+14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+14-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:10:5-81
+14-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:10:22-78
+15    <uses-permission android:name="android.permission.WAKE_LOCK" />
+15-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:11:5-68
+15-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:11:22-65
+16    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+16-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:12:5-75
+16-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:12:22-72
+17    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED" />
+17-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:13:5-82
+17-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:13:22-79
+18    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+18-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:14:5-84
+18-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:14:22-81
+19    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL" />
+19-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:15:5-84
+19-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:15:22-81
+20    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
+20-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:16:5-85
+20-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:16:22-82
+21    <uses-permission android:name="android.permission.GET_TASKS" />
+21-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:17:5-68
+21-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:17:22-65
+22    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+22-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:18:5-81
+22-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:18:22-78
+23
+24    <application>
+24-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:20:5-164:19
+25        <service
+25-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:22:9-32:19
+26            android:name="com.taobao.accs.ChannelService"
+26-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:23:13-58
+27            android:exported="true"
+27-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:24:13-36
+28            android:process=":channel" >
+28-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:25:13-39
+29            <intent-filter>
+29-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:26:13-28:29
+30                <action android:name="com.taobao.accs.intent.action.SERVICE" />
+30-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:27:17-80
+30-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:27:25-77
+31            </intent-filter>
+32            <intent-filter>
+32-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:29:13-31:29
+33                <action android:name="com.taobao.accs.intent.action.ELECTION" />
+33-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:30:17-81
+33-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:30:25-78
+34            </intent-filter>
+35        </service>
+36        <service
+36-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:34:9-40:19
+37            android:name="com.taobao.accs.data.MsgDistributeService"
+37-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:35:13-69
+38            android:exported="true" >
+38-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:36:13-36
+39            <intent-filter>
+39-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:37:13-39:29
+40                <action android:name="com.taobao.accs.intent.action.RECEIVE" />
+40-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:38:17-80
+40-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:38:25-77
+41            </intent-filter>
+42        </service>
+43
+44        <receiver
+44-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:42:9-58:20
+45            android:name="com.taobao.accs.EventReceiver"
+45-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:43:13-57
+46            android:process=":channel" >
+46-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:44:13-39
+47            <intent-filter>
+47-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:45:13-47:29
+48                <action android:name="android.intent.action.BOOT_COMPLETED" />
+48-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:46:17-79
+48-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:46:25-76
+49            </intent-filter>
+50            <intent-filter>
+50-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:48:13-50:29
+51                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+51-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:49:17-79
+51-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:49:25-76
+52            </intent-filter>
+53            <intent-filter>
+53-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:51:13-54:29
+54                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+54-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:52:17-80
+54-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:52:25-77
+55
+56                <data android:scheme="package" />
+56-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:53:17-50
+56-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:53:23-47
+57            </intent-filter>
+58            <intent-filter>
+58-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:55:13-57:29
+59                <action android:name="android.intent.action.USER_PRESENT" />
+59-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:56:17-77
+59-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:56:25-74
+60            </intent-filter>
+61        </receiver>
+62        <receiver
+62-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:60:9-69:20
+63            android:name="com.taobao.accs.ServiceReceiver"
+63-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:61:13-59
+64            android:process=":channel" >
+64-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:62:13-39
+65            <intent-filter>
+65-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:63:13-65:29
+66                <action android:name="com.taobao.accs.intent.action.COMMAND" />
+66-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:64:17-80
+66-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:64:25-77
+67            </intent-filter>
+68            <intent-filter>
+68-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:66:13-68:29
+69                <action android:name="com.taobao.accs.intent.action.START_FROM_AGOO" />
+69-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:67:17-88
+69-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:67:25-85
+70            </intent-filter>
+71        </receiver>
+72
+73        <service
+73-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:71:9-74:41
+74            android:name="com.taobao.accs.internal.AccsJobService"
+74-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:72:13-67
+75            android:permission="android.permission.BIND_JOB_SERVICE"
+75-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:73:13-69
+76            android:process=":channel" />
+76-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:74:13-39
+77        <service
+77-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:76:9-78:42
+78            android:name="com.taobao.accs.ChannelService$KernelService"
+78-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:77:13-72
+79            android:process=":channel" />
+79-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:78:13-39
+80        <service
+80-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:80:9-86:19
+81            android:name="org.android.agoo.accs.AgooService"
+81-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:81:13-61
+82            android:exported="true" >
+82-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:82:13-36
+83            <intent-filter>
+83-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:37:13-39:29
+84                <action android:name="com.taobao.accs.intent.action.RECEIVE" />
+84-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:38:17-80
+84-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:38:25-77
+85            </intent-filter>
+86        </service>
+87        <service
+87-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:88:9-95:19
+88            android:name="com.umeng.message.UmengIntentService"
+88-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:89:13-64
+89            android:exported="true"
+89-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:90:13-36
+90            android:process=":channel" >
+90-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:91:13-39
+91            <intent-filter>
+91-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:92:13-94:29
+92                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+92-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:93:17-81
+92-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:93:25-78
+93            </intent-filter>
+94        </service>
+95        <service
+95-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:97:9-104:19
+96            android:name="com.umeng.message.XiaomiIntentService"
+96-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:98:13-65
+97            android:exported="true"
+97-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:99:13-36
+98            android:process=":channel" >
+98-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:100:13-39
+99            <intent-filter>
+99-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:92:13-94:29
+100                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+100-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:93:17-81
+100-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:93:25-78
+101            </intent-filter>
+102        </service>
+103
+104        <receiver
+104-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:106:9-117:20
+105            android:name="com.taobao.agoo.AgooCommondReceiver"
+105-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:107:13-63
+106            android:exported="true"
+106-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:108:13-36
+107            android:process=":channel" >
+107-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:109:13-39
+108            <intent-filter>
+108-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:110:13-112:29
+109                <action android:name="${applicationId}.intent.action.COMMAND" />
+109-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:111:17-81
+109-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:111:25-78
+110            </intent-filter>
+111            <intent-filter>
+111-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:51:13-54:29
+112                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+112-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:52:17-80
+112-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:52:25-77
+113
+114                <data android:scheme="package" />
+114-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:53:17-50
+114-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:53:23-47
+115            </intent-filter>
+116        </receiver>
+117
+118        <service
+118-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:119:9-126:19
+119            android:name="com.umeng.message.UmengMessageIntentReceiverService"
+119-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:120:13-79
+120            android:exported="true"
+120-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:121:13-36
+121            android:process=":channel" >
+121-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:122:13-39
+122            <intent-filter>
+122-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:123:13-125:29
+123                <action android:name="org.android.agoo.client.MessageReceiverService" />
+123-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:124:17-89
+123-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:124:25-86
+124            </intent-filter>
+125        </service>
+126
+127        <receiver
+127-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:128:9-130:40
+128            android:name="com.umeng.message.NotificationProxyBroadcastReceiver"
+128-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:129:13-80
+129            android:exported="false" />
+129-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:130:13-37
+130
+131        <service
+131-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:132:9-151:19
+132            android:name="com.umeng.message.UmengMessageCallbackHandlerService"
+132-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:133:13-80
+133            android:exported="false"
+133-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:135:13-37
+134            android:permission="android.permission.BIND_JOB_SERVICE" >
+134-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:134:13-69
+135            <intent-filter>
+135-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:136:13-138:29
+136                <action android:name="com.umeng.messge.registercallback.action" />
+136-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:137:17-83
+136-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:137:25-80
+137            </intent-filter>
+138            <intent-filter>
+138-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:139:13-141:29
+139                <action android:name="com.umeng.message.enablecallback.action" />
+139-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:140:17-82
+139-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:140:25-79
+140            </intent-filter>
+141            <intent-filter>
+141-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:142:13-144:29
+142                <action android:name="com.umeng.message.disablecallback.action" />
+142-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:143:17-83
+142-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:143:25-80
+143            </intent-filter>
+144            <intent-filter>
+144-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:145:13-147:29
+145                <action android:name="com.umeng.message.message.handler.action" />
+145-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:146:17-83
+145-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:146:25-80
+146            </intent-filter>
+147            <intent-filter>
+147-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:148:13-150:29
+148                <action android:name="com.umeng.message.message.sendmessage.action" />
+148-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:149:17-87
+148-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:149:25-84
+149            </intent-filter>
+150        </service>
+151        <service
+151-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:153:9-156:40
+152            android:name="com.umeng.message.UmengDownloadResourceService"
+152-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:154:13-74
+153            android:exported="false"
+153-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:156:13-37
+154            android:permission="android.permission.BIND_JOB_SERVICE" />
+154-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:155:13-69
+155
+156        <provider
+156-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:158:9-163:20
+157            android:name="com.umeng.message.provider.MessageProvider"
+157-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:159:13-70
+158            android:authorities="${applicationId}.umeng.message"
+158-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:160:13-65
+159            android:exported="false" >
+159-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:161:13-37
+160            <grant-uri-permission android:pathPattern=".*" />
+160-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:162:13-62
+160-->C:\Users\zhaokai\AndroidStudioProjects\AllInLinkApp\AllInLinkApp\push\AndroidManifest.xml:162:35-59
+161        </provider>
+162    </application>
+163
+164</manifest>

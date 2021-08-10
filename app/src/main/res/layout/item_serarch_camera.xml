@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LinearLayout"
+    android:id="@+id/lin_back"
+    android:layout_width="match_parent">
+
+    <CheckBox
+        android:visibility="gone"
+        android:id="@+id/cb_check"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        style="@style/CustomCheckboxTheme"
+        android:checked="false"></CheckBox>
+    <ImageView
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/img_creame"
+        android:layout_width="30dp"
+        android:layout_height="30dp"></ImageView>
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/tv_name"
+        android:text="sssss"
+        style="@style/TextView_normal"></TextView>
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="通道位置"
+        android:textColor="#ff8d8d8d"
+
+        android:textSize="12dp"
+        />
+    <CheckBox
+        android:id="@+id/cb_collect"
+        style="@style/CheckCollect"
+        android:layout_width="30dp"
+        android:layout_height="30dp"></CheckBox>
+</LinearLayout>

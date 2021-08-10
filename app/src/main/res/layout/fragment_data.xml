@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="1dp"
+        android:layout_height="51dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_serach"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/img_menu"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="录像回放"
+            android:textSize="18dp"
+            android:textColor="@color/black"></TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/iv_add"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/mainbackgroundcolor">
+
+        <ImageView
+
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/img_video_add">
+
+        </ImageView>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_video"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+        <WebView
+            android:id="@+id/wv_load"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"></WebView>
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:id="@+id/seek_bar_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.allinlink.platformapp.video_project.widget.MySeekBar
+                android:id="@+id/seek_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:id="@+id/currentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/seek_progress"
+                android:paddingLeft="20dip"
+                android:text="00/00" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+<!--    <com.allinlink.platformapp.video_project.widget.MultiSampleVideo-->
+<!--        android:id="@+id/detail_player"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="300dp"-->
+<!--        android:background="@color/mainbackgroundcolor"-->
+<!--        android:visibility="gone" />-->
+</LinearLayout>

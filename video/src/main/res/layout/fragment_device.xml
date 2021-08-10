@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lin"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+
+            android:text="实时播放"></TextView>
+        <ImageView
+            android:id="@+id/iv_collect"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/img_collectn"></ImageView>
+        <ImageView
+            android:id="@+id/iv_title_right"
+            android:layout_width="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/img_menu"></ImageView>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_current"
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="50dp">
+       <RelativeLayout
+           android:background="@drawable/rl_background"
+           android:layout_width="50dp"
+           android:layout_marginLeft="10dp"
+           android:layout_height="match_parent">
+           <CheckBox
+               android:id="@+id/check_all"
+               style="@style/CustomCheckboxTheme"
+
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerInParent="true"></CheckBox>
+       </RelativeLayout>
+        <LinearLayout
+            android:background="@drawable/rl_background"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent">
+            <CheckBox
+                android:id="@+id/check_one"
+                android:layout_width="0dp"
+                style="@style/CustomCheckboxTheme"
+                android:paddingLeft="8dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="17dp"
+                android:text="视频一"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"></CheckBox>
+            <CheckBox
+                android:id="@+id/check_two"
+                android:text="视频二"
+                android:paddingLeft="8dp"
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                style="@style/CustomCheckboxTheme"
+
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"></CheckBox>
+            <CheckBox
+                android:id="@+id/check_three"
+                android:text="视频三"
+                android:paddingLeft="8dp"
+
+                android:layout_width="0dp"
+                style="@style/CustomCheckboxTheme"
+
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"></CheckBox>
+            <CheckBox
+                android:id="@+id/check_four"
+                android:text="视频四"
+                android:paddingLeft="8dp"
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                style="@style/CustomCheckboxTheme"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"></CheckBox>
+        </LinearLayout>
+    </LinearLayout>
+    <com.allinlink.platformapp.video_project.widget.VideoControlView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.allinlink.platformapp.video_project.widget.VideoControlView>
+
+</LinearLayout>

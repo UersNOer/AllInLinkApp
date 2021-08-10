@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="500dp"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_height="wrap_content">
+    <com.allinlink.platformapp.video_project.widget.EditLinearLayout
+        android:id="@+id/lin_name"
+        style="@style/LinearLayout">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_marginLeft="15dp"
+            android:text="VPN账号"
+            style="@style/TextView_normal">
+        </TextView>
+        <EditText
+            style="@style/UpdataEdit"
+            android:background="@null"
+            android:hint="请输入账号"></EditText>
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_eyeclose"></ImageView> </com.allinlink.platformapp.video_project.widget.EditLinearLayout>
+    <com.allinlink.platformapp.video_project.widget.EditLinearLayout
+        android:id="@+id/lin_pwd"
+        style="@style/LinearLayout">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_marginLeft="15dp"
+            android:text="VPN密码"
+            style="@style/TextView_normal">
+        </TextView>
+        <EditText
+            style="@style/UpdataEdit"
+            android:background="@null"
+            android:hint="请输入密码"></EditText>
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_eyeclose"></ImageView> </com.allinlink.platformapp.video_project.widget.EditLinearLayout>
+    <Button
+        android:layout_marginTop="15dp"
+        android:id="@+id/bt_submit"
+        android:text="登录"
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        style="@style/BlueButton"></Button>
+
+</LinearLayout>

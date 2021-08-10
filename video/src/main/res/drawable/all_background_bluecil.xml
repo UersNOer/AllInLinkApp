@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--填充颜色-->
+    <solid android:color="#3164F3" />
+
+    <!--边框宽度、颜色设置-->
+    <stroke
+        android:width="1dp"
+        android:color="#3164F3" />
+    <corners
+        android:bottomLeftRadius="90px"
+        android:bottomRightRadius="90px"
+        android:topLeftRadius="90px"
+        android:topRightRadius="90px" />
+</shape>

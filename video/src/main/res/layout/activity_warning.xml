@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.allinlink.platformapp.video_project.ui.activity.WarningActivity">
+    <LinearLayout
+
+        style="@style/LinearLayout">
+        <TextView style="@style/TextView_normal"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="3"
+            android:width="0dp"
+            android:text="设备类型"
+            ></TextView>
+        <TextView style="@style/TextView_normal"
+            android:id="@+id/tv_deviceType"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="12"
+            android:width="0dp"
+            android:text="ssssss"
+            ></TextView>
+    </LinearLayout>
+    <LinearLayout
+        style="@style/LinearLayout">
+        <TextView style="@style/TextView_normal"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="3"
+            android:width="0dp"
+            android:text="工单类型"
+            ></TextView>
+        <TextView style="@style/TextView_normal"
+            android:id="@+id/tv_fromtype"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="12"
+            android:width="0dp"
+            android:text="ssssss"
+            ></TextView>
+    </LinearLayout>
+    <LinearLayout
+        style="@style/LinearLayout">
+        <TextView style="@style/TextView_normal"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="3"
+            android:width="0dp"
+            android:text="详细说明"
+            ></TextView>
+        <TextView style="@style/TextView_normal"
+            android:id="@+id/tv_taskExplain"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="12"
+            android:width="0dp"
+            android:text="ssssss"
+            ></TextView>
+    </LinearLayout>
+    <LinearLayout
+        style="@style/LinearLayout">
+        <TextView style="@style/TextView_normal"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="3"
+            android:width="0dp"
+            android:text="IP地址"
+            ></TextView>
+        <TextView style="@style/TextView_normal"
+            android:id="@+id/tv_ip"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="12"
+            android:width="0dp"
+            android:text="ssssss"
+            ></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/LinearLayout">
+        <TextView style="@style/TextView_normal"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="3"
+            android:width="0dp"
+            android:text="时间"
+            ></TextView>
+        <TextView style="@style/TextView_normal"
+            android:id="@+id/tv_time"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="12"
+            android:width="0dp"
+            android:text="ssssss"
+            ></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/LinearLayout">
+        <TextView style="@style/TextView_normal"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="3"
+            android:width="0dp"
+            android:text="工单详情"
+            ></TextView>
+        <TextView style="@style/TextView_normal"
+            android:id="@+id/tv_desc"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="12"
+            android:width="0dp"
+            android:text="ssssss"
+            ></TextView>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_doc"
+        android:paddingLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        style="@style/TextView_normal"
+        android:text="附加列表"
+        android:layout_height="50dp"></TextView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:id="@+id/ry_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

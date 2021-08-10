@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .App{
+            height:300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="App">
+        <video style='width:100%;height:100%;background-color: black;'  id="playerid"></video>
+    </div>
+    <script src='./BoncH5Player.js'></script>
+    <script>
+        var configs = {
+            videoId : 'playerid',
+            // channelId:'6e919186773c4144b66f180c48504dc3-0000'
+        }
+        var _player = new  BoncH5Player.default(configs)
+        var gettime = e => this.onGetTime(e);
+        var maxTime,recordArr;
+        //从安卓获取开始时间和结束时间
+        function getTime(channelId,startTime,endTime,streamServerIP,streamServerPort){
+            var recordInfo = {
+                channelId,
+                startTime,
+                endTime,
+                streamServerPort,
+                streamServerIP
+            };
+            this._player.searchRecord(recordInfo);
+        };
+        //从安卓获取跳转的时间
+        function getCurrentTime(time){
+            this.toPlay(this.recordArr,time);
+        }
+        //暂停
+        function pause() {
+            this._player.pause();
+        }
+        //继续播放
+        function playContinue() {
+            this._player.playContinue();
+            this._player.on("currentTime", this.gettime);
+        }
+        //关闭视频
+        function closeVideo(){
+            this._player.closeVideo();
+        }
+        _player.on("onRecordInfo", function(e) {
+            var { number, Response } = e;
+            if (Response.SumNum === "0") {
+                android.setProgress(0);
+
+            }else{
+                this.recordArr = Response.RecordList.Item;
+                var minTime = new Date(this.recordArr[0].StartTime).getTime();
+                var maxTime = new Date(this.recordArr[this.recordArr.length - 1].EndTime).getTime();
+                this.maxTime = maxTime;
+                //传给安卓录像时间差
+                android.setProgress(minTime,maxTime);
+                this.toPlay(this.recordArr);
+            }
+            //android.setMessage(e);
+        });
+        _player.on("currentTime", gettime);
+        function onGetTime(time){
+            if(time/1000 < this.maxTime){
+                //传给安卓当前播放的时间
+                android.setCurrTime(time);
+            }
+        }
+        //开始播放录像
+        function toPlay(recordArr,current){
+            var time = new Date(recordArr[0].StartTime).getTime();
+            var channelId = recordArr[0].ChannelID;
+            var endTime, startTime;
+            startTime = time;
+            endTime = new Date(recordArr[recordArr.length - 1].EndTime).getTime();
+            startTime = Math.floor(startTime / 1000);
+            endTime = Math.floor(endTime / 1000);
+            var param = {
+                startTime : current/1000 || startTime,
+                channelId,
+                endTime,
+                speed: 1,
+            };
+            this._player.playRecord(param);
+        }
+    </script>
+    
+</body>
+</html>

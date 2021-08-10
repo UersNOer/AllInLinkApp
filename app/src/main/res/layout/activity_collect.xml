@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lin_back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.SearchCameraActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_back"
+        android:visibility="visible"
+        style="@style/LinearLayout">
+
+        <TextView
+            android:id="@+id/tv_mode_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/all_background_bluecil"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="5dp"
+            android:text="多选"
+            android:visibility="visible"
+            android:textColor="@color/white"></TextView>
+
+
+        <TextView
+            android:id="@+id/tv_mode_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/all_background_bluecil"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="15dp"
+            android:visibility="gone"
+            android:paddingBottom="5dp"
+            android:text="取消"
+            android:textColor="@color/white"></TextView>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ry_data"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></androidx.recyclerview.widget.RecyclerView>
+    <TextView
+        android:layout_toLeftOf="@id/tv_mode_2"
+        android:id="@+id/tv_sure"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="50dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/white"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp"
+        android:text="确定"
+        android:visibility="gone"
+        android:textColor="@color/black"></TextView>
+</LinearLayout>

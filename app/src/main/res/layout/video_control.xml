@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_zoom_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/img_video_fd"></ImageView>
+
+            <TextView
+                android:id="@+id/tv_control_preset"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/rl_background"
+                android:gravity="center"
+                android:text="预置点"
+                android:textColor="@color/black"></TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@drawable/control_circle"
+                android:layout_centerInParent="true">
+                <ImageView
+                    android:id="@+id/iv_control_up"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/control_up_style"></ImageView>
+                <ImageView
+                    android:id="@+id/iv_control_down"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/control_down_style"></ImageView>
+                <ImageView
+                    android:id="@+id/iv_control_left"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/control_left_style"></ImageView>
+                <ImageView
+                    android:id="@+id/iv_control_right"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/control_right_style"></ImageView>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_zoom_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/img_video_sx"></ImageView>
+
+            <ImageView
+                android:id="@+id/iv_control_stop"
+                android:layout_width="110dp"
+                android:layout_height="47dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="13dp"
+                android:src="@drawable/img_video_start"></ImageView>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainbackgroundcolor"
+    >
+
+    <View
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></View>
+
+    <ImageView
+        android:id="@+id/iv_center"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/tv_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="雪亮监管平台"
+        android:textColor="#FF3359E2"
+        android:textSize="14dp" />
+
+    <LinearLayout
+        android:id="@+id/lin_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_nav"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="66dp"
+        android:background="@drawable/tv_background_cil"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:text="帐号："
+            android:textColor="#353538"
+            android:textSize="15dp" />
+
+        <EditText
+
+            android:id="@+id/ed_user_account"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center|left"
+            android:singleLine="true"
+            android:textColor="#353538"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_accounterror"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lin_account"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="4dp"
+        android:text="账号不存在或输入错误"
+        android:textColor="#F5222D"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/lin_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lin_account"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/tv_background_cil"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:text="密码："
+            android:singleLine="true"
+            android:textColor="#353538"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/ed_user_password"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center|left"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="#353538"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/iv_user_password"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/icon_eyeclose" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lin_password"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="4dp"
+        android:text="密码错误"
+        android:textColor="#F5222D"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/bt_user_login"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/lin_password"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/all_background_bluecil"
+        android:text="登录"
+        android:textColor="#fff"
+        android:textSize="20dp" />
+</RelativeLayout>

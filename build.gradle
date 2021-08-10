@@ -2,8 +2,13 @@
 apply from: "config.gradle"
 buildscript {
     repositories {
-        google()
-        jcenter()
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven{
+            url 'http://69.231.154.223:8103/artifactory/libs-snapshot-local/'
+        }
+
+
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.2.2"
@@ -15,9 +20,13 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
-        jcenter() // Warning: this repository is going to shut down soon
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
         maven { url 'https://jitpack.io' }
+
+        maven{
+            url 'http://69.231.154.223:8103/artifactory/libs-snapshot-local/'
+        }
     }
 }
 

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lin_back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.allinlink.platformapp.video_project.ui.activity.SearchCameraActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/tv_background_graycil">
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/icon_seash"></ImageView>
+            <EditText
+                android:id="@+id/ed_search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:singleLine="true" />
+            <ImageView
+                android:id="@+id/iv_clear"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/img_edit_clear"></ImageView>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_marginTop="9dp"
+        android:id="@+id/rl_back"
+        android:visibility="gone"
+        style="@style/LinearLayout">
+
+        <TextView
+            android:id="@+id/tv_mode_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/all_background_bluecil"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="5dp"
+            android:text="多选"
+            android:visibility="visible"
+            android:textColor="@color/white"></TextView>
+
+
+        <TextView
+            android:id="@+id/tv_mode_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/all_background_bluecil"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="15dp"
+            android:visibility="gone"
+            android:paddingBottom="5dp"
+            android:text="取消"
+            android:textColor="@color/white"></TextView>
+    </RelativeLayout>
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/ry_data"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></com.jcodecraeer.xrecyclerview.XRecyclerView>
+    <TextView
+        android:layout_toLeftOf="@id/tv_mode_2"
+        android:id="@+id/tv_sure"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp"
+        android:text="确 定"
+        android:visibility="gone"
+        android:textColor="#3164F3"></TextView>
+</LinearLayout>
