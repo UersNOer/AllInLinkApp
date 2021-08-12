@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title_bar_height">48dp</dimen>
+    <dimen name="margin_vertical">14dp</dimen>
+    <dimen name="margin_horizontal">16dp</dimen>
+    <dimen name="padding_vertical">14dp</dimen>
+    <dimen name="padding_horizontal">16dp</dimen>
+    <dimen name="padding_horizontal_padding">8dp</dimen>
+    <dimen name="selectable_item_translation">50dp</dimen>
+
+    <dimen name="evt_img_width">80dp</dimen>
+    <dimen name="evt_img_height">100dp</dimen>
+
+    <dimen name="thumb_img_width">72dp</dimen>
+    <dimen name="thumb_img_height">72dp</dimen>
+
+    <dimen name="space_width">10dp</dimen>
+    <dimen name="gallery_item_margin">5dp</dimen>
+
+    <dimen name="text_size_xsmall">12sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_normal">16sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_xlarge">20sp</dimen>
+
+    <dimen name="item_height">46dp</dimen>
+
+    <dimen name="button_text_size">17sp</dimen>
+    <dimen name="button_height">42dp</dimen>
+    <dimen name="t334">334px</dimen>
+    <dimen name="t167">167px</dimen>
+    <dimen name="t144">144px</dimen>
+    <dimen name="t317">317px</dimen>
+    <dimen name="t318">318px</dimen>
+    <dimen name="t128">128px</dimen>
+    <dimen name="t103">103px</dimen>
+    <dimen name="t88">88px</dimen>
+    <dimen name="t68">68px</dimen>
+    <dimen name="t58">58px</dimen>
+    <dimen name="t48">48px</dimen>
+    <dimen name="t38">38px</dimen>
+    <dimen name="t15">15px</dimen>
+    <dimen name="t5">5px</dimen>
+    <dimen name="t10">10px</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+</resources>

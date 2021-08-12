@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/id_pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/t128"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/t15"
+                android:paddingRight="@dimen/t15"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:id="@+id/marker_img"
+                    android:layout_width="@dimen/t88"
+                    android:layout_height="@dimen/t88" />
+                <TextView
+                    android:id="@+id/caseTitle"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/t48"
+                    android:textColor="@color/c_333333"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/navi_btn"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginRight="@dimen/t58"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/navi"
+                android:scaleType="centerInside"
+
+                android:background="@drawable/circle"
+                app:tint="@color/white"
+                app:backgroundTint="#3ec6ff" />
+        </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_f6"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/t103"
+        android:paddingRight="@dimen/t15"
+        android:paddingTop="@dimen/t15"
+        android:paddingBottom="@dimen/t15">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/t88"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/caseType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="案件类别:"
+                android:textSize="@dimen/t38"
+                android:textColor="@color/c_333333"/>
+
+            <TextView
+                android:id="@+id/tvCaseType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/t5"
+                android:textSize="@dimen/t38"
+                android:textColor="@color/c_999999"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/t88"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/caseAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="案件地址:"
+                android:textSize="@dimen/t38"
+                android:textColor="@color/c_333333"/>
+
+            <TextView
+                android:id="@+id/tvCaseAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="@dimen/t38"
+                android:layout_marginLeft="@dimen/t5"
+                android:textColor="@color/blue_light"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/t88"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/caseLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前环节:"
+                android:textSize="@dimen/t38"
+                android:textColor="@color/c_333333"/>
+
+            <TextView
+                android:id="@+id/tvCaseLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/t5"
+                android:textSize="@dimen/t38"
+                android:textColor="@color/c_333333"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_f6"/>
+    <TextView
+        android:id="@+id/case_detail"
+        android:textColor="@color/c_333333"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/t128"
+        android:textStyle="bold"
+        android:textSize="@dimen/t48"
+        android:text="查看详情"
+        android:gravity="center"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

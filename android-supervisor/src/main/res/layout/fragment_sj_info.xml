@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:divider="@drawable/divider"
+            android:showDividers="beginning|middle|end"
+            android:paddingTop="@dimen/padding_vertical"
+            android:paddingBottom="@dimen/padding_vertical">
+
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:showDividers="middle"
+                android:divider="@drawable/input_divider"
+                android:background="@drawable/bg_rect_white">
+
+
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/tv_bg"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#f5f4f5"
+                            android:textSize="@dimen/text_size_normal" />
+
+                    </TableRow>
+
+
+                <TableRow
+                    android:paddingLeft="@dimen/padding_horizontal"
+                    android:paddingRight="@dimen/padding_horizontal"
+                    android:paddingTop="@dimen/padding_vertical"
+                    android:paddingBottom="@dimen/padding_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/padding_horizontal"
+                        android:gravity="right"
+                        android:text="事件类别"
+                        android:textColor="@color/darken"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <TextView
+                        android:id="@+id/tv_qjsj_sj"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        tools:text="市民上报"
+                        android:textColor="@color/gray"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/text_size_normal" />
+                </TableRow>
+
+
+
+                <TableRow
+                    android:id="@+id/tr_event_info_source"
+                    android:paddingLeft="@dimen/padding_horizontal"
+                    android:paddingRight="@dimen/padding_horizontal"
+                    android:paddingTop="@dimen/padding_vertical"
+                    android:paddingBottom="@dimen/padding_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/padding_horizontal"
+                        android:gravity="right"
+                        android:text="所属区域"
+                        android:textColor="@color/darken"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <TextView
+                        android:id="@+id/tv_qy"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        tools:text="市民上报"
+                        android:textColor="@color/gray"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/text_size_normal" />
+                </TableRow>
+
+
+                <TableRow
+                    android:id="@+id/tr_event_info_address"
+                    android:paddingLeft="@dimen/padding_horizontal"
+                    android:paddingRight="@dimen/padding_horizontal"
+                    android:paddingTop="@dimen/padding_vertical"
+                    android:paddingBottom="@dimen/padding_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/padding_horizontal"
+                        android:gravity="right"
+                        android:text="事发位置"
+                        android:textColor="@color/darken"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <TextView
+                        android:id="@+id/tv_event_info_address"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/gray"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/text_size_normal"
+                        tools:text="湖南省长沙市岳麓区雷锋大道" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tr_event_info_desc"
+                    android:paddingLeft="@dimen/padding_horizontal"
+                    android:paddingRight="@dimen/padding_horizontal"
+                    android:paddingTop="@dimen/padding_vertical"
+                    android:paddingBottom="@dimen/padding_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/padding_horizontal"
+                        android:gravity="right"
+                        android:text="问题描述"
+                        android:textColor="@color/darken"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <TextView
+                        android:id="@+id/tv_event_info_desc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        tools:text="案件描述"
+                        android:textColor="@color/gray"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/text_size_normal" />
+                </TableRow>
+            </TableLayout>
+
+
+            <TextView
+                android:paddingLeft="@dimen/padding_horizontal"
+                android:paddingRight="@dimen/padding_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="处理前"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <com.example.android_supervisor.ui.media.MediaGridView
+            android:id="@+id/gv_event_info_attaches_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           />
+
+            <TextView
+                android:paddingLeft="@dimen/padding_horizontal"
+                android:paddingRight="@dimen/padding_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="处理后"
+                android:gravity="center"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/text_size_normal" />
+            <com.example.android_supervisor.ui.media.MediaGridView
+                android:id="@+id/gv_event_info_attaches_f"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

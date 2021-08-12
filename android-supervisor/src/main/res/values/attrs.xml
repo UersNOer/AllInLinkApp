@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CountDownButton">
+        <attr name="countDownFormat" format="string"/>
+        <attr name="countDown" format="float"/>
+        <attr name="countDownInterval" format="float"/>
+        <attr name="enableCountDown" format="boolean"/>
+        <attr name="cdFinishText" format="string"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="RingProgressBar">
+        <attr name="ringColor" format="color" />
+        <attr name="ringProgressColor" format="color" />
+        <attr name="ringWidth" format="dimension" />
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="max" format="integer" />
+        <attr name="textIsShow" format="boolean" />
+        <attr name="progress" format="integer" />
+        <attr name="ringPadding" format="dimension" />
+        <attr name="style">
+            <enum name="STROKE" value="0" />
+            <enum name="FILL" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CheckView">
+        <attr name="outer_circle_radius" format="dimension" />
+        <attr name="inner_circle_radius" format="dimension" />
+        <attr name="outer_circle_color" format="color" />
+        <attr name="inner_circle_color" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="MenuItemView">
+        <attr name="title" format="string" />
+        <attr name="hint" format="string" />
+        <attr name="showdDrawable" format="boolean" />
+        <attr name="childClickable" format="boolean" />
+        <attr name="isMustTag" format="boolean" />
+
+    </declare-styleable>
+
+    <declare-styleable name="EasyPickerView">
+        <attr name="epvTextSize" format="dimension" />
+        <attr name="epvTextColor" format="color" />
+        <attr name="epvTextPadding" format="dimension" />
+        <attr name="epvTextMaxScale" format="float" />
+        <attr name="epvTextMinAlpha" format="float" />
+        <attr name="epvRecycleMode" format="boolean" />
+        <attr name="epvMaxShowNum" format="integer" />
+    </declare-styleable>
+<!--    <declare-styleable name="HomeMenuView">-->
+<!--        <attr name="title" format="string" />-->
+<!--        <attr name="imgSrc" format="reference" />-->
+<!--    </declare-styleable>-->
+
+</resources>

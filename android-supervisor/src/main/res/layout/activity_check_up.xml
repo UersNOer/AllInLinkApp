@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:divider="@drawable/divider"
+    android:showDividers="middle">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_width" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rect_white_normal"
+        android:divider="@drawable/input_divider"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <LinearLayout
+            android:id="@+id/ll_check_up_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_horizontal"
+                android:text="抽查内容"
+                android:textColor="@color/darken"
+                android:textSize="@dimen/text_size_normal" />
+
+            <TextView
+                android:id="@+id/tv_check_up_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:padding="8dp"
+                android:lines="3"
+                android:maxLength="200"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/gray_light"
+                android:textSize="15sp"
+                android:background="@drawable/bg_text_editor"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_check_up_reply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="抽查回复"
+                android:layout_marginRight="@dimen/padding_horizontal"
+                android:textColor="@color/darken"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <EditText
+                android:id="@+id/et_check_up_reply"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:padding="8dp"
+                android:hint="请输入办理意见"
+                android:lines="3"
+                android:background="@drawable/bg_text_editor"
+                android:maxLength="200"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/gray_light"
+                android:textSize="15sp"
+                />
+
+
+
+        </LinearLayout>
+
+        <com.example.android_supervisor.ui.media.MediaUploadGridView
+            android:id="@+id/gv_check_up_attaches"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_check_up_submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="@dimen/margin_vertical"
+        android:background="@drawable/button_round_blue"
+        android:text="提 交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_large" />
+</LinearLayout>

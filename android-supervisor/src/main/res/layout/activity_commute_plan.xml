@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_rect_blue_normal">
+
+    <RelativeLayout
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_commute_plan_calendar_left"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_calendar_left"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_commute_plan_calendar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            tools:text="2019年4月"
+            android:textSize="@dimen/text_size_large"
+            android:textColor="@color/white"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_commute_plan_calendar_right"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_calendar_right"
+            app:tint="@color/white" />
+    </RelativeLayout>
+
+    <com.haibin.calendarview.CalendarLayout
+        android:id="@+id/layout_commute_plan_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:default_status="shrink"
+        app:calendar_show_mode="both_month_week_view"
+        app:calendar_content_view_id="@+id/fl_commute_plan_calendar_expand">
+
+        <com.haibin.calendarview.CalendarView
+            android:id="@+id/cv_commute_plan_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            app:week_view="com.example.android_supervisor.ui.view.DefaultWeekView"
+            app:month_view="com.example.android_supervisor.ui.view.DefaultMonthView"
+            app:calendar_height="36dp"
+            app:current_month_text_color="@color/white"
+            app:other_month_text_color="#00000000"
+            app:min_year="2018"
+            app:max_year="2020"
+            app:scheme_text="."
+            app:scheme_text_color="#333"
+            app:scheme_theme_color="#333"
+            app:selected_text_color="@color/darken"
+            app:selected_theme_color="@color/white"
+            app:current_day_text_color="@color/white"
+            app:month_view_show_mode="mode_only_current"
+            app:week_start_with="sun"
+            app:week_bar_height="24dp"
+            app:week_background="@color/blue"
+            app:week_line_background="@color/blue"
+            app:week_text_color="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/fl_commute_plan_calendar_expand"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/background">
+
+            <ImageView
+                android:id="@+id/iv_commute_plan_calendar_expand"
+                android:layout_width="60dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/margin_vertical"
+                android:scaleType="centerInside"
+                android:src="@drawable/calendar_expand"
+                android:background="@drawable/bg_calendar_expand"/>
+
+            <include layout="@layout/activity_commute_plan_content" />
+
+        </LinearLayout>
+    </com.haibin.calendarview.CalendarLayout>
+</LinearLayout>

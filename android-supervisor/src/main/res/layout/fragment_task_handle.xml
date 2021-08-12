@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:divider="@drawable/divider"
+        android:showDividers="beginning|middle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rect_white_normal"
+            android:divider="@drawable/input_divider"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="@dimen/padding_horizontal"
+                android:paddingRight="@dimen/padding_horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/padding_horizontal"
+                    android:text="操作"
+                    android:drawableLeft="@drawable/verifier"
+                    android:textColor="@color/darken"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <LinearLayout
+                    android:id="@+id/fl_radio"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_horizontal"
+                    android:paddingRight="@dimen/padding_horizontal"
+                    android:paddingTop="10dp"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_task_handle_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="@dimen/padding_horizontal"
+                android:paddingRight="@dimen/padding_horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/padding_horizontal"
+                    android:text="类型"
+                    android:textColor="@color/darken"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:id="@+id/tv_task_handle_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:hint="请选择"
+                    android:drawableRight="@drawable/enter"
+                    android:drawablePadding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="@dimen/text_size_normal"
+                    android:background="@drawable/bg_text_editor"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_task_handle_opinion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="@dimen/padding_horizontal"
+                android:paddingRight="@dimen/padding_horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/padding_horizontal"
+                    android:text="意见"
+                    android:drawableLeft="@drawable/verifier"
+                    android:textColor="@color/darken"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <EditText
+                    android:id="@+id/et_task_handle_opinion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:padding="8dp"
+                    android:hint="请输入办理意见（1~120字）"
+                    android:lines="3"
+                    android:maxLength="120"
+                    android:textColor="@color/gray"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="15sp"
+                    android:background="@drawable/bg_text_editor"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/tv_commonReply"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:clickable="true"
+                        android:src="@drawable/cyysz">
+
+                    </androidx.appcompat.widget.AppCompatImageView>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ib_addword"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/cyy"
+                        android:backgroundTint="@color/icon_hc">
+
+                    </androidx.appcompat.widget.AppCompatImageView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_task_handle_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/item_height"
+                android:gravity="center"
+                android:paddingLeft="@dimen/padding_horizontal"
+                android:paddingRight="@dimen/padding_horizontal"
+                android:paddingTop="@dimen/padding_vertical"
+                android:paddingBottom="@dimen/padding_vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="原因"
+                    android:textColor="@color/darken"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <EditText
+                    android:id="@+id/et_task_handle_reason"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:layout_marginLeft="@dimen/padding_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:padding="8dp"
+                    android:hint="请输入退件原因（1~120字）"
+                    android:lines="3"
+                    android:maxLength="120"
+                    android:textColor="@color/gray"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="15sp"
+                    android:background="@drawable/bg_text_editor"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.example.android_supervisor.ui.media.MediaUploadGridView
+            android:id="@+id/gv_task_handle_attaches"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_task_handle_submit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="@dimen/margin_vertical"
+            android:layout_marginBottom="@dimen/margin_vertical"
+            android:background="@drawable/button_round_blue"
+            android:text="提 交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_large" />
+    </LinearLayout>
+</ScrollView>

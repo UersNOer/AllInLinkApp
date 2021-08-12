@@ -1,0 +1,138 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        applicationId "com.example.android_supervisor"
+        minSdkVersion 19
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi"
+//            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //调试时不加入混淆
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'com.jakewharton:butterknife:8.0.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.0.1'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.0-RC1'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle:2.2.2'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.2'
+    implementation 'com.cncoderx.recyclerviewhelper:library:1.2.1'
+    //    implementation 'com.yqritc:recyclerview-flexibledivider:1.4.0'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5'
+    //    implementation 'com.github.ybq:Android-SpinKit:1.2.0'
+    // Crash上报和在线更新
+    implementation 'com.tencent.bugly:nativecrashreport:3.3.1'
+    implementation('com.github.PhilJay:MPAndroidChart:v3.1.0') {
+        exclude module: 'annotation'
+    }
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'io.netty:netty-all:5.0.0.Alpha2'
+    implementation('io.socket:socket.io-client:1.0.0') {
+        // excluding org.json which is provided by Android
+        exclude group: 'org.json', module: 'json'
+    }
+    implementation 'com.tencent.map:tencent-map-vector-sdk:4.2.2'
+    /**
+     *  高德地图相关
+     */
+    implementation 'com.amap.api:navi-3dmap:latest.integration'
+    //    implementation 'com.amap.api:3dmap:latest.integration'
+    //    implementation 'com.amap.api:map2d:5.2.0'
+    implementation 'com.amap.api:search:6.9.0'
+    implementation 'com.amap.api:location:4.6.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+    // 视频播放
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.8.0'
+    implementation 'com.google.android.exoplayer:exoplayer-hls:2.8.0'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.8.0'
+    implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:2.8.0'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.8.0'
+    implementation('com.google.android.exoplayer:extension-okhttp:2.8.0') {
+        exclude module: 'okhttp'
+    }
+    implementation 'com.haibin:calendarview:3.6.1'
+    implementation 'com.github.ChengangFeng:TickView:v1.0.2'
+    implementation 'com.andrognito.patternlockview:patternlockview:1.0.0'
+    // 数据库
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    //recyclerView
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    //tablayout
+    api 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    implementation 'com.zzhoujay.richtext:richtext:3.0.7'
+    //图片选择依赖
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    implementation 'com.orhanobut:logger:2.2.0'
+    implementation('com.github.ihsanbal:LoggingInterceptor:3.0.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+    //腾讯音视频 modul
+    implementation 'com.tencent.liteav:LiteAVSDK_TRTC:latest.release'
+    implementation 'com.xw.repo:xedittext:1.0.6@aar'
+    implementation project(path: ':arcfaces')
+    implementation project(path: ':orc')
+    implementation project(path: ':trtc_tx')
+    implementation project(path: ':common')
+    implementation project(path: ':picture_selector_library')
+    implementation 'com.github.zhaolewei:ZlwAudioRecorder:v1.07'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'
+    //路由
+    implementation 'com.library.tangxiaolv:androidrouter:2.0.9'
+    annotationProcessor 'com.library.tangxiaolv:androidrouter-compiler:1.0.1'
+}

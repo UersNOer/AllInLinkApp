@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.YqReportNoteActivity">
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_map_address_search"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardBackgroundColor="#eeffffff"
+        app:cardCornerRadius="5dp">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:singleLine="true"
+            android:paddingLeft="12dp"
+            android:paddingRight="50dp"
+            android:focusable="true"
+            android:hint="请输入时间"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/ease_search_bar_icon_normal"
+            android:textColor="@color/darken"
+            android:textSize="@dimen/text_size_normal"
+            android:dropDownHeight="240dp"
+            android:background="@null"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_time"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:visibility="gone"
+            android:src="@drawable/ease_search_bar_icon_normal"
+            android:scaleType="centerInside"
+            app:tint="@color/text_blue"/>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ff_table"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.bin.david.form.core.SmartTable
+                android:id="@+id/table"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/tv_function"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:src="@drawable/refresh"
+            app:backgroundTint="@color/blue"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="40dp"
+            app:tint="@color/white" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

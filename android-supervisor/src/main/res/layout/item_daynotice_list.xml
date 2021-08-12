@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tvDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2020-07-15"
+            android:textColor="#333333"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="(已保存)"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="5dp"
+            android:textSize="13sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="13sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#666666"
+        android:layout_marginBottom="5dp"
+        android:text="少的可怜很舒服流口水发送登录附件都是法第三方和多斯拉克划分的上课了"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvSubmit"
+            android:layout_width="80dp"
+            android:text="提交"
+            android:background="@drawable/shape_daynotice_button"
+            android:gravity="center"
+            android:textColor="@color/blue"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_height="25dp"/>
+    </RelativeLayout>
+</LinearLayout>

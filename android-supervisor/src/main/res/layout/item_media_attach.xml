@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/thumb_img_width"
+    android:layout_height="@dimen/thumb_img_height">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_media_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        app:riv_corner_radius="5dp" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <com.example.android_supervisor.ui.view.RingProgressBar
+            android:id="@+id/pb_media_progress"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            app:ringColor="#dcdcdc"
+            app:ringProgressColor="#c4dcff"
+            app:ringWidth="2.5dp"
+            app:textColor="@color/gray"
+            app:style="FILL"/>
+
+        <TextView
+            android:id="@+id/tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+
+
+    <ImageView
+        android:id="@+id/iv_video_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_play"
+        android:visibility="gone" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/iv_media_remove"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_gravity="right"
+        android:src="@drawable/ic_remove"
+        android:layout_margin="2dp"
+        app:maxImageSize="10dp"
+        app:fabCustomSize="16dp"
+        app:tint="@color/white"
+        app:backgroundTint="@color/red" />
+</FrameLayout>

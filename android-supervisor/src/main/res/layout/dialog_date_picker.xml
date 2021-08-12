@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="30dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:paddingLeft="27dp"
+            android:paddingRight="27dp">
+
+            <TextView
+                android:id="@+id/tvCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="取消"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/tvConfirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="确定"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#dcdcdc" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp">
+
+            <com.example.android_supervisor.utils.EasyPickerView
+                android:id="@+id/epvYear"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:epvMaxShowNum="5"
+                app:epvRecycleMode="false"
+                app:epvTextColor="#f35839"
+                app:epvTextMaxScale="1.5"
+                app:epvTextMinAlpha="0.35"
+                app:epvTextPadding="12dp"
+                app:epvTextSize="15sp"
+                />
+
+            <com.example.android_supervisor.utils.EasyPickerView
+                android:id="@+id/epvMonth"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:epvMaxShowNum="5"
+                app:epvRecycleMode="true"
+                app:epvTextColor="#f35839"
+                app:epvTextMaxScale="1.5"
+                app:epvTextMinAlpha="0.35"
+                app:epvTextPadding="12dp"
+                app:epvTextSize="15sp" />
+
+            <com.example.android_supervisor.utils.EasyPickerView
+                android:id="@+id/epvDay"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:epvMaxShowNum="5"
+                app:epvRecycleMode="true"
+                app:epvTextColor="#f35839"
+                app:epvTextMaxScale="1.5"
+                app:epvTextMinAlpha="0.35"
+                app:epvTextPadding="12dp"
+                app:epvTextSize="15sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

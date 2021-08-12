@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:divider="@drawable/divider"
+        android:showDividers="middle">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_width" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:divider="@drawable/input_divider"
+            android:showDividers="middle"
+            android:background="@drawable/bg_rect_white_normal">
+
+            <LinearLayout
+                android:id="@+id/ll_setting_data_sync"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/padding_horizontal"
+                android:paddingRight="@dimen/padding_horizontal"
+                android:background="@drawable/bg_rect_white">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="数据同步"
+                    android:textColor="@color/darken"
+                    android:textSize="@dimen/text_size_normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_setting_data_clean"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/padding_horizontal"
+                android:paddingRight="@dimen/padding_horizontal"
+                android:background="@drawable/bg_rect_white">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="清理数据"
+                    android:textColor="@color/darken"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:id="@+id/tv_setting_data_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray_light"
+                    android:textSize="@dimen/text_size_xsmall" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_width" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:divider="@drawable/input_divider"
+            android:showDividers="middle"
+            android:background="@drawable/bg_rect_white_normal">
+
+            <LinearLayout
+                android:id="@+id/ll_setting_modify_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/padding_horizontal"
+                android:paddingRight="@dimen/padding_horizontal"
+                android:background="@drawable/bg_rect_white">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/enter"
+                    android:text="修改密码"
+                    android:textColor="@color/darken"
+                    android:textSize="@dimen/text_size_normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_setting_upgrade_app"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/padding_horizontal"
+                android:paddingRight="@dimen/padding_horizontal"
+                android:background="@drawable/bg_rect_white">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="版本更新"
+                    android:textColor="@color/darken"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:id="@+id/tv_setting_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray_light"
+                    android:textSize="@dimen/text_size_xsmall" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_width" />
+
+        <LinearLayout
+            android:id="@+id/ll_setting_tutorial"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:background="@drawable/bg_rect_white">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/enter"
+                android:text="帮助手册"
+                android:textColor="@color/darken"
+                android:textSize="@dimen/text_size_normal" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <RelativeLayout
+            android:id="@+id/ll_setting_switch"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:background="@drawable/bg_rect_white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="切换账号"
+                android:textColor="@color/text_red"
+                android:textSize="@dimen/text_size_normal" />
+
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_width" />
+
+        <RelativeLayout
+            android:id="@+id/ll_setting_exit"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:background="@drawable/bg_rect_white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="退出应用"
+                android:textColor="@color/text_red"
+                android:textSize="@dimen/text_size_normal" />
+
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_width" />
+        <RelativeLayout
+            android:id="@+id/ll_setting_resume_exit"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:background="@drawable/bg_rect_white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="恢复初始设置 并退出应用"
+                android:textColor="@color/text_red"
+                android:textSize="@dimen/text_size_normal" />
+
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_width" />
+
+    </LinearLayout>
+</ScrollView>

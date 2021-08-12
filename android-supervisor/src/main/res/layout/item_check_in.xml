@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:paddingLeft="@dimen/padding_horizontal"
+    android:paddingRight="@dimen/padding_horizontal"
+    android:paddingTop="10dp"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:background="@drawable/bg_rect_white_normal">
+
+    <TextView
+        android:id="@+id/tv_check_in_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginRight="@dimen/margin_horizontal"
+        android:singleLine="true"
+        tools:text="早班"
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/gray" />
+
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="上班打卡："
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/gray"/>
+
+        <TextView
+            android:id="@+id/tv_check_in_on_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="未打卡"
+            android:textColorHint="@color/text_hint"
+            tools:text="09:22:03"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/gray"/>
+
+        <TextView
+            android:id="@+id/tv_check_in_on_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            tools:text="(正常打卡)"
+            android:textSize="@dimen/text_size_xsmall"
+            android:textColor="@color/blue_light"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvOnAddress"
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/gray"
+        android:layout_width="match_parent"
+        android:text="上班地址：湖南省长沙市岳麓区新城科技园5栋801"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="下班打卡："
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/gray"/>
+
+        <TextView
+            android:id="@+id/tv_check_in_off_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="未打卡"
+            android:textColorHint="@color/text_hint"
+            tools:text="18:06:42"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/gray"/>
+
+        <TextView
+            android:id="@+id/tv_check_in_off_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            tools:text="(正常打卡)"
+            android:textSize="@dimen/text_size_xsmall"
+            android:textColor="@color/blue_light"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvOffAddress"
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/gray"
+        android:layout_width="match_parent"
+        android:text="上班地址：湖南省长沙市岳麓区新城科技园5栋801"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

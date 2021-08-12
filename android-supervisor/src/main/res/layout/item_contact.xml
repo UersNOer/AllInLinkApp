@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:divider="@drawable/divider"
+    android:showDividers="middle">
+
+    <LinearLayout
+        android:id="@+id/ll_contact_delimit"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/padding_horizontal"
+        android:paddingRight="@dimen/padding_horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_contact_delimit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textStyle="bold"
+            tools:text="A"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/darken"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:duplicateParentState="true"
+        android:background="@drawable/bg_rect_white"
+        android:paddingLeft="@dimen/padding_horizontal"
+        android:paddingRight="@dimen/padding_horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_contact_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                tools:text="王五"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/darken"/>
+
+            <LinearLayout
+                android:id="@+id/ll_contact_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp">
+
+                <TextView
+                    android:id="@+id/tv_contact_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    tools:text="13307999439"
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/gray"/>
+
+                <TextView
+                    android:id="@+id/tv_contact_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"
+                    tools:text="监督员"
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/gray"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_contact_call"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_phone"
+                app:tint="@color/text_blue2"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_contact_sms"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_sms"
+                app:tint="@color/text_blue2"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -11,3 +11,6 @@ include ':uninetwork'
 include ':vpn'
 include ':mapsdk'
 include ':searchsdk'
+
+//城管通
+include ':ucrops',':trtc_tx',':picture_selector_library',':orc',':common',':arcfaces',':android-supervisor'

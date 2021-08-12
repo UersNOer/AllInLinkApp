@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.example.android_supervisor.ui.view.MenuItemView
+            android:id="@+id/mv_case_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:childClickable="true"
+            app:hint="请选择疫情类型"
+            app:isMustTag="true"
+            app:title="场所类型"></com.example.android_supervisor.ui.view.MenuItemView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:paddingTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/tv_csName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_horizontal"
+                android:gravity="center|left"
+                android:text="场所名称"
+                android:drawableLeft="@drawable/verifier"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <Spinner
+                android:id="@+id/et_csName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="top"
+                android:maxLength="200"
+                android:padding="8dp"
+                android:textColor="@color/gray"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:paddingTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_horizontal"
+                android:gravity="center|left"
+                android:text="姓名"
+                android:drawableLeft="@drawable/verifier"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_text_editor"
+                android:gravity="top"
+                android:maxLength="200"
+                android:padding="8dp"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/text_hint"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:paddingTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_horizontal"
+                android:gravity="center|left"
+                android:text="联系方式"
+                android:drawableLeft="@drawable/verifier"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_text_editor"
+                android:gravity="top"
+                android:maxLength="200"
+                android:padding="8dp"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/text_hint"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:paddingTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_horizontal"
+                android:gravity="center|left"
+                android:text="身份证号"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <EditText
+                android:id="@+id/et_sfz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_text_editor"
+                android:gravity="top"
+                android:maxLength="200"
+                android:padding="8dp"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/text_hint"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingTop="10dp"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_horizontal"
+                android:drawableLeft="@drawable/verifier"
+                android:gravity="center|left"
+                android:text="所在户籍"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <EditText
+                android:id="@+id/et_hjHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_text_editor"
+                android:gravity="top"
+                android:maxLength="200"
+                android:padding="8dp"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/text_hint"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:paddingTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_horizontal"
+                android:gravity="center|left"
+                android:text="现在地址"
+                android:drawableLeft="@drawable/verifier"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <EditText
+                android:id="@+id/et_xzdz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_text_editor"
+                android:gravity="top"
+                android:maxLength="200"
+                android:padding="8dp"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/text_hint"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:paddingTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_horizontal"
+                android:gravity="center|left"
+                android:text="体温情况"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <EditText
+                android:id="@+id/et_tw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_text_editor"
+                android:gravity="top"
+                android:maxLength="200"
+                android:padding="8dp"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/text_hint"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:paddingTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_horizontal"
+                android:gravity="center|left"
+                android:text="是否有不适"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <com.xuexiang.xui.widget.button.switchbutton.SwitchButton
+                android:id="@+id/swb_ks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"/>
+
+
+            <EditText
+                android:id="@+id/et_ks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_text_editor"
+                android:gravity="top"
+                android:visibility="gone"
+                android:hint="有症状就填写"
+                android:maxLength="200"
+                android:padding="8dp"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/text_hint"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:paddingTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_horizontal"
+                android:gravity="center|left"
+                android:text="武汉居住地"
+                android:textSize="@dimen/text_size_normal" />
+
+            <EditText
+                android:id="@+id/et_wh_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_text_editor"
+                android:gravity="top"
+                android:maxLength="200"
+                android:padding="8dp"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/text_hint"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:paddingTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_horizontal"
+                android:gravity="center|left"
+                android:text="离开武汉日期"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <TextView
+                android:id="@+id/et_leave_whData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_text_editor"
+                android:gravity="top"
+                android:maxLength="200"
+                android:padding="8dp"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/text_hint"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingTop="10dp"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:paddingBottom="10dp">
+
+
+            <TextView
+                android:id="@+id/tv_csname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_horizontal"
+                android:drawableLeft="@drawable/verifier"
+                android:gravity="center|left"
+                android:text="交通工具"
+                android:textSize="@dimen/text_size_normal" />
+
+            <Spinner
+                android:id="@+id/et_jtgj"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+                android:maxLength="200"
+                android:padding="8dp"
+                android:textColor="@color/gray"
+                android:textSize="15sp" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:paddingTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_horizontal"
+                android:gravity="center|left"
+                android:text="工具信息"
+                android:drawableLeft="@drawable/verifier"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <EditText
+                android:id="@+id/et_gjxx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_text_editor"
+                android:gravity="top"
+                android:maxLength="200"
+                android:padding="8dp"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/text_hint"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:paddingTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_horizontal"
+                android:gravity="center|left"
+                android:text="沿途是否停留"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <EditText
+                android:id="@+id/et_sftl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_text_editor"
+                android:gravity="top"
+                android:maxLength="200"
+                android:padding="8dp"
+                android:hint="如是，请填写停留地点"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/text_hint"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:paddingTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_horizontal"
+                android:gravity="center|left"
+                android:text="同行人员姓名"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <EditText
+                android:id="@+id/et_txry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_text_editor"
+                android:gravity="top"
+                android:maxLength="200"
+                android:padding="8dp"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/text_hint"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_cs_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:paddingTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_horizontal"
+                android:gravity="center|left"
+                android:text="人员类别"
+                android:drawableLeft="@drawable/verifier"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <Spinner
+                android:id="@+id/et_rylb"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="8dp"
+                android:hint="武汉入湘、湘籍入汉、经汉入湘其他户籍、湖北入湘、湘入湖北、经湖北入湘其他省市人员"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/text_hint"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:paddingTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_horizontal"
+                android:gravity="center|left"
+                android:text="有无和武汉人员进行接触"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <com.xuexiang.xui.widget.button.switchbutton.SwitchButton
+                android:id="@+id/swb_whjc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"/>
+
+
+            <EditText
+                android:id="@+id/et_whjc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_text_editor"
+                android:gravity="top"
+                android:visibility="gone"
+                android:maxLength="200"
+                android:padding="8dp"
+                android:hint="有接触就填写"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/text_hint"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:paddingTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_horizontal"
+                android:gravity="center|left"
+                android:text="潜伏期结束日期"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <TextView
+                android:id="@+id/et_qfry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_text_editor"
+                android:gravity="top"
+                android:maxLength="200"
+                android:padding="8dp"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/text_hint"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingRight="@dimen/padding_horizontal"
+            android:paddingTop="10dp"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_mx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_text_editor"
+                    android:gravity="top"
+                    android:hint="请输入备注描述(1~200字)"
+                    android:lines="4"
+                    android:maxLength="200"
+                    android:maxLines="5"
+                    android:padding="8dp"
+                    android:textColor="@color/gray"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_desc_character"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:src="@drawable/ic_record"
+                    android:layout_margin="5dp"
+                    android:text="0-200" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/btn_report"
+            android:layout_width="wrap_content"
+            android:text="上报"
+            android:textColor="@color/white"
+            android:background="@drawable/button_round_blue"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    </ScrollView>
+

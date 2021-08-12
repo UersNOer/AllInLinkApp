@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_pop"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="6dp"
+        android:backgroundTint="#D11B0D"
+        android:background="@drawable/popup">
+
+        <TextView
+            android:id="@+id/tv_poiName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3.0dip"
+            android:layout_marginRight="3.0dip"
+            android:textSize="9.0dip"
+            android:text="卡点名"
+
+            android:layout_gravity="center_vertical"
+            android:textColor="#F0E7E7"
+           />
+
+    </LinearLayout>
+
+    <ImageView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/pano_image_background_tip" />
+</LinearLayout>

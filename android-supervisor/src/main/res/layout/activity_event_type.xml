@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rect_blue"
+        app:tabBackground="@drawable/button_rect_blue"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabIndicatorColor="@color/blue_deep"
+        app:tabIndicatorHeight="2dp"
+        app:tabMode="scrollable"
+        app:tabPadding="0dp"
+        app:tabIndicatorFullWidth="false"
+        app:tabSelectedTextColor="@color/icon_hc"
+        app:tabTextAppearance="@style/TabTextAppearance"
+        app:tabTextColor="@color/white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/bg_rect_blue_deep" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_rect_white"
+        android:divider="@drawable/divider2"
+        android:showDividers="middle">
+
+        <ListView
+            android:id="@+id/list_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:choiceMode="singleChoice"
+            android:divider="@drawable/divider"
+            android:dividerHeight="0.5dp"
+            android:listSelector="@null" />
+
+        <ExpandableListView
+            android:id="@+id/list_right"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:choiceMode="singleChoice"
+            android:divider="@drawable/divider"
+            android:dividerHeight="0.5dp"
+            android:groupIndicator="@null"
+            android:listSelector="@null" />
+    </LinearLayout>
+</LinearLayout>

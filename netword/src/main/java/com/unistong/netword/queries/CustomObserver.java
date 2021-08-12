@@ -47,19 +47,19 @@ public abstract class CustomObserver<T> implements Observer<T> {
             if (date != null && "success".equals(date.status)) {
                 onCustomNext(t);
             } else if (!"success".equals(date.status)) {
-                if (baseActivity != null && date.message == null) {
-//                    baseActivity.showToast("网络错误");
-                } else if (null != baseActivity && null != date.message) {
-//                    baseActivity.showToast(date.message);
-                }
+//                if (baseActivity != null && date.message == null) {
+////                    baseActivity.showToast("网络错误");
+//                } else if (null != baseActivity && null != date.message) {
+////                    baseActivity.showToast(date.message);
+//                }
 
             } else {
-                if (baseActivity != null) {
-                    if (!MyUtils.txtCheckEmpty(date.message)) {
-//                        baseActivity.showToast(date.message);
-                        onDefeated(date.message);
-                    }
-                }
+//                if (baseActivity != null) {
+//                    if (!MyUtils.txtCheckEmpty(date.message)) {
+////                        baseActivity.showToast(date.message);
+//                        onDefeated(date.message);
+//                    }
+//                }
             }
         } else {
             onCustomNext(t);
@@ -77,15 +77,15 @@ public abstract class CustomObserver<T> implements Observer<T> {
     public void onError(Throwable e) {
         dismissDialog();
         onErrorCustom(e);
-        if (baseActivity != null) {
-            if (e instanceof InterruptedIOException
-                    || e instanceof SocketException
-                    || e instanceof UnknownHostException) {
-//                Toast.makeText(baseActivity, "网络连接错误", Toast.LENGTH_LONG).show();
-            } else {
-//                Toast.makeText(baseActivity, e.getMessage(), Toast.LENGTH_LONG).show();
-            }
-        }
+//        if (baseActivity != null) {
+//            if (e instanceof InterruptedIOException
+//                    || e instanceof SocketException
+//                    || e instanceof UnknownHostException) {
+////                Toast.makeText(baseActivity, "网络连接错误", Toast.LENGTH_LONG).show();
+//            } else {
+////                Toast.makeText(baseActivity, e.getMessage(), Toast.LENGTH_LONG).show();
+//            }
+//        }
     }
 
 
@@ -98,9 +98,9 @@ public abstract class CustomObserver<T> implements Observer<T> {
      * 隐藏Dialog
      */
     private void dismissDialog() {
-        if (baseActivity != null && baseActivity.alertDialog != null) {
-            baseActivity.alertDialog.dismiss();
-        }
+//        if (baseActivity != null && baseActivity.alertDialog != null) {
+//            baseActivity.alertDialog.dismiss();
+//        }
     }
 
     /**

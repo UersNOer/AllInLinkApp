@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/divider_color">
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/select_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        app:buttonTint="@color/blue"
+        android:button="@drawable/checkbox"
+        android:focusable="false"
+        android:clickable="false" />
+</FrameLayout>
