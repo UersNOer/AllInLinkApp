@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.WordHandleTask">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_word"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+        />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+       >
+
+        <Button
+            android:id="@+id/tn_add_word"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/sp_12"
+            android:background="@drawable/button_round_blue"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sp_16"
+            android:text="增加常用语"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</LinearLayout>

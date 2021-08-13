@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:divider="@drawable/divider"
+    android:showDividers="beginning|middle|end"
+    android:background="@drawable/button_selector_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/padding_horizontal"
+        android:paddingRight="@dimen/padding_horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:minWidth="20dp"
+            android:layout_marginRight="8dp"
+            app:cardBackgroundColor="@color/blue">
+
+            <TextView
+                android:id="@+id/tv_event_index"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:includeFontPadding="false"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_small"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_event_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/darken"
+            tools:text="案件标题"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_event_db"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="督"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_xsmall"
+                android:background="#53b77b"/>
+
+            <TextView
+                android:id="@+id/tv_event_cb"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="5dp"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="催"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_xsmall"
+                android:background="#fc7a5a"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/enter"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding_horizontal"
+        android:paddingRight="@dimen/padding_horizontal"
+        android:paddingTop="@dimen/padding_vertical"
+        android:paddingBottom="@dimen/padding_vertical">
+
+        <ImageView
+            android:id="@+id/iv_event_cover"
+            android:layout_width="@dimen/evt_img_width"
+            android:layout_height="@dimen/evt_img_height"
+            android:layout_marginRight="@dimen/padding_horizontal"
+            android:padding="1dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_attach_img"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="来件时间："
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/gray"/>
+
+                <TextView
+                    android:id="@+id/tv_event_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/gray"/>
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5dp">
+                <TextView
+                    android:id="@+id/tv_event_time_ms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/gray"/>
+
+                <TextView
+                    android:id="@+id/tv_event_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/gray"
+                    tools:text="2018-11-28 11:05"/>
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="事发位置："
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/gray"/>
+
+                <TextView
+                    android:id="@+id/tv_event_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/gray"
+                    tools:text="湖南省长沙市岳麓区麓谷大道"/>
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="问题描述："
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/gray"/>
+
+                <TextView
+                    android:id="@+id/tv_event_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/gray"
+                    tools:text="这个一个测试案件"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</LinearLayout>

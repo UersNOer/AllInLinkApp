@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/grid_item_case_report"
+    android:layout_gravity="center"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/press_item_main"
+    android:clickable="false"
+    android:padding="6dp"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_home_menu"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/circle"
+        android:clickable="false"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_home_ajsb"
+        android:padding="10dp"
+        app:backgroundTint="#3ec6ff"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_home_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:clickable="false"
+        android:gravity="center_horizontal"
+        android:text="案件上报上报"
+        android:textColor="@color/c_333333"
+        android:textSize="14sp" />
+</LinearLayout>

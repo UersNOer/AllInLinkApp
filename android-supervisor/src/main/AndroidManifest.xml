@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.android_supervisor">
+
+<!--        xmlns:tools="http://schemas.android.com/tools"-->
+<!--        package="com.example.android_supervisor">-->
+        <!-- 网络访问权限 -->
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+        <uses-permission android:name="android.permission.INTERNET" /> <!-- 磁盘访问权限 -->
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission
+            android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+            tools:ignore="ProtectedPermissions" /> <!-- 获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.CAMERA" />
+        <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- 这个权限用于进行网络定位 -->
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 这个权限用于访问GPS定位 -->
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+        <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 用于读取手机当前的状态 -->
+        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<!--    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />-->
+        <uses-permission
+            android:name="android.permission.READ_LOGS"
+            tools:ignore="ProtectedPermissions" />
+        <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+        <uses-permission android:name="android.permission.WAKE_LOCK" />
+        <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+        <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+        <uses-permission android:name="android.permission.VIBRATE" />
+        <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+        <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+        <uses-permission
+            android:name="android.permission.WRITE_SETTINGS"
+            tools:ignore="ProtectedPermissions" />
+
+        <application
+            android:name=".common.AppContext"
+            android:allowBackup="true"
+            android:appComponentFactory="app"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_label"
+            android:networkSecurityConfig="@xml/network_security_config"
+            android:roundIcon="@drawable/app_icon_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            android:usesCleartextTraffic="true"
+            tools:ignore="GoogleAppIndexingWarning"
+            tools:replace="android:icon,android:label,android:theme,android:name,android:appComponentFactory">
+            <activity android:name=".ui.LeaveRecordActivity"></activity>
+            <activity android:name=".ui.LeaveManagerActivity" />
+            <activity android:name=".ui.EditDayNoticeActivity" />
+            <activity android:name=".ui.DayNoticeActivity" />
+
+            <service
+                android:name=".service.AutoUploadService"
+                android:enabled="true"
+                android:exported="true" />
+
+            <activity android:name=".ui.SJDescActivity" />
+            <activity
+                android:name=".ui.WordHandleTask"
+                android:label="常用语设置" />
+
+            <meta-data
+                android:name="android.max_aspect"
+                android:value="2.3" />
+
+            <uses-library
+                android:name="org.apache.http.legacy"
+                android:required="false" />
+
+            <meta-data
+                android:name="TencentMapSDK"
+                android:value="X24BZ-CT5KD-K3V46-HPBZX-WXQEF-XDFZR" />
+            <meta-data
+                android:name="com.tencent.bugly.API_ID"
+                android:value="03905b0742" /> <!-- android:value="932e0fd681" /> -->
+            <meta-data
+                android:name="com.tencent.bugly.API_KEY"
+                android:value="7e75daa5-9ea2-4558-b97a-0c6a1dcaca3a" /> <!-- android:value="ccf8103f-0a18-4683-a697-bd102bca63cb" /> -->
+            <meta-data
+                android:name="com.baidu.speech.APP_ID"
+                android:value="16093666" />
+            <meta-data
+                android:name="com.baidu.speech.API_KEY"
+                android:value="bZhEi4Q0FDnLEOGjEEbYIji5" />
+            <meta-data
+                android:name="com.baidu.speech.SECRET_KEY"
+                android:value="mSWYbLFyBfedgvacBDP6ONwy5m0F0SG9" />
+            <meta-data
+                android:name="com.baidu.ocr.sdk.API_KEY"
+                android:value="dMUe4ppor9GOTik0lFCLB6GI" />
+            <meta-data
+                android:name="com.baidu.ocr.sdk.SECRET_KEY"
+                android:value="i5omEfKSMRmlXDPEHDE12ARO6BH7WL5U" /> <!-- <&#45;&#45; //开发者申请的key  dee3911a819d842b3012cf53c8270acd&ndash;&gt; -->
+            <meta-data
+                android:name="com.amap.api.v2.apikey"
+                android:value="8e56937d5d861912ea9014266c692614" /><!--7e00be4315dba4c5ea826e27103df60a-->
+
+            <activity
+                android:name=".ui.SplashActivity"
+                android:theme="@style/SplashTheme">
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+            </activity>
+            <activity
+                android:name="com.amap.api.maps.offlinemap.OfflineMapActivity"
+                android:screenOrientation="portrait" />
+            <activity
+                android:name=".ui.LoginActivity"
+                android:label="登录"
+                android:windowSoftInputMode="stateAlwaysHidden" />
+            <activity
+                android:name=".map.poisearch.InputTipsActivity"
+                android:label="兴趣点"
+                android:windowSoftInputMode="stateAlwaysHidden" />
+            <activity
+                android:name=".ui.MainActivity"
+                android:label="@string/app_label"
+                android:launchMode="singleTask"
+                android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+            <activity
+                android:name=".ui.RegisterActivity"
+                android:label="注册"
+                android:windowSoftInputMode="stateAlwaysHidden" />
+            <activity
+                android:name=".ui.DeptListActivity"
+                android:label="选择部门" />
+            <activity
+                android:name=".ui.ServiceSettingActivity"
+                android:label="服务器配置"
+                android:windowSoftInputMode="stateAlwaysHidden" />
+            <activity
+                android:name=".ui.ServerListActivity"
+                android:label="服务器配置列表" />
+            <activity
+                android:name=".ui.ActualNewsListActivity"
+                android:label="实时新闻"
+                android:windowSoftInputMode="stateAlwaysHidden" />
+            <activity
+                android:name=".ui.ActualNewsDetailActivity"
+                android:label="新闻详情"
+                android:windowSoftInputMode="stateAlwaysHidden" />
+            <activity
+                android:name=".ui.EventNewActivity"
+                android:label="案件上报"
+                android:windowSoftInputMode="stateAlwaysHidden" />
+            <activity
+                android:name=".ui.FastReportActivity"
+                android:label="快速上报"
+                android:windowSoftInputMode="stateAlwaysHidden" />
+            <activity
+                android:name=".ui.EventEditActivity"
+                android:label="案件编辑"
+                android:windowSoftInputMode="stateAlwaysHidden" />
+            <activity
+                android:name=".ui.EventTypeActivity"
+                android:label="案件类别" />
+            <activity
+                android:name=".ui.EventDetailActivity"
+                android:label="案件详情" />
+            <activity
+                android:name=".ui.MyTaskListActivity"
+                android:label="个人任务"
+                android:theme="@style/AppTheme"
+                android:windowSoftInputMode="stateAlwaysHidden" />
+            <activity
+                android:name=".ui.TaskDetailActivity"
+                android:label="任务详情"
+                android:windowSoftInputMode="stateAlwaysHidden" />
+            <activity
+                android:name=".ui.HistoryActivity"
+                android:label="历史记录"
+                android:windowSoftInputMode="stateAlwaysHidden" />
+            <activity
+                android:name=".ui.StatisticsActivity"
+                android:label="工作统计" />
+            <activity
+                android:name=".ui.view.CheckStausDetailActivity"
+                android:label="消息提醒" />
+            <activity
+                android:name=".ui.CheckInActivity"
+                android:label="打卡" />
+            <activity
+                android:name=".ui.CommutePlanActivity"
+                android:label="日常考勤" />
+            <activity
+                android:name=".ui.ContactsActivity"
+                android:label="通讯录" /> <!-- <activity -->
+            <!-- android:name=".ui.ContactListActivity" -->
+            <!-- android:label="通讯录" -->
+            <!-- android:windowSoftInputMode="adjustPan|stateAlwaysHidden" /> -->
+            <activity
+                android:name=".ui.CensusTaskListActivity"
+                android:label="专项任务" />
+            <activity
+                android:name=".ui.DeptList2Activity"
+                android:label="专项任务" />
+            <activity
+                android:name=".ui.YqZHQKDayDetailsActivity"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:label="场所人员每日健康情况" />
+            <activity
+                android:name=".ui.CensusTaskInfoActivity"
+                android:label="专项任务" />
+            <activity
+                android:name=".ui.CensusEventNewActivity"
+                android:label="普查案件上报"
+                android:windowSoftInputMode="stateAlwaysHidden" />
+            <activity
+                android:name=".ui.CensusEventDetailActivity"
+                android:label="普查案件详情" />
+            <activity
+                android:name=".ui.CheckUpActivity"
+                android:label="抽查回复"
+                android:windowSoftInputMode="stateAlwaysHidden" />
+            <activity
+                android:name=".map.MapActivity"
+                android:label="地图浏览" />
+            <activity
+                android:name=".map.AMapActivity"
+                android:label="地图浏览" />
+            <activity android:name=".x5.BrowserActivity" />
+            <activity
+                android:name=".ui.media.GalleryActivity"
+                android:label="图库" /> <!-- <activity -->
+            <!-- android:name=".ui.EaseChatActivity" -->
+            <!-- android:label="聊天室" -->
+            <!-- android:windowSoftInputMode="stateAlwaysHidden" /> -->
+            <!-- <activity -->
+            <!-- android:name=".chat.ChatActivity" -->
+            <!-- android:label="聊天室" -->
+            <!-- android:windowSoftInputMode="stateAlwaysHidden" /> &lt;!&ndash; 语音通话 &ndash;&gt; -->
+            <!-- <activity -->
+            <!-- android:name=".chat.VoiceCallActivity" -->
+            <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+            <!-- android:excludeFromRecents="true" -->
+            <!-- android:launchMode="singleTask" -->
+            <!-- android:screenOrientation="portrait" -->
+            <!-- android:theme="@style/horizontal_slide" /> &lt;!&ndash; 视频通话 &ndash;&gt; -->
+            <!-- <activity -->
+            <!-- android:name=".chat.VideoCallActivity" -->
+            <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+            <!-- android:excludeFromRecents="true" -->
+            <!-- android:launchMode="singleTask" -->
+            <!-- android:screenOrientation="portrait" -->
+            <!-- android:theme="@style/horizontal_slide" /> -->
+            <activity
+                android:name=".ui.PwdModifyActivity"
+                android:label="修改密码" />
+            <activity
+                android:name=".x5.CTZActivity"
+                android:label="请假管理" />
+            <activity
+                android:name=".ui.GestureLoginActivity"
+                android:label="锁屏"
+                android:windowSoftInputMode="stateAlwaysHidden" />
+            <activity
+                android:name=".ui.TutorialActivity"
+                android:label="操作指南" />
+            <activity
+                android:name=".ui.TutorialSubActivity"
+                android:label="操作指南" />
+
+            <service
+                android:name=".service.AppService"
+                android:priority="1000" />
+
+            <activity
+                android:name="com.baidu.ocr.camera.CameraActivity"
+                android:screenOrientation="portrait" />
+            <activity
+                android:name=".ui.upgrade.UpgradeDialogActivity"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:screenOrientation="portrait"
+                android:theme="@style/DialogActivityStyle" />
+            <activity
+                android:name="com.tencent.bugly.beta.ui.BetaActivity"
+                android:configChanges="keyboardHidden|orientation|screenSize|locale"
+                android:theme="@android:style/Theme.Translucent" /> <!-- API 24以上配置 -->
+            <provider
+                android:name="androidx.core.content.FileProvider"
+                android:authorities="com.example.android_supervisor.fileProvider"
+                android:exported="false"
+                android:grantUriPermissions="true"
+                tools:replace="android:authorities">
+                <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/provider_paths" />
+            </provider>
+
+            <receiver
+                android:name=".broadcast.ForceReloginReceiver"
+                android:exported="false">
+                <intent-filter>
+                    <action android:name="com.example.android_supervisor.action.FORCE_REBOOT" />
+                </intent-filter>
+            </receiver>
+
+            <activity android:name=".ui.media.VideoActivity" />
+            <activity android:name=".ui.media.ImagePreviewActivity" />
+            <activity android:name=".ui.YqEventReportActivity" />
+            <activity
+                android:name=".x5.LeaveNoteActivity"
+                android:label="请假记录" />
+
+            <service
+                android:name="com.baidu.speech.VoiceRecognitionService"
+                android:exported="false" /> <!-- 设置环信应用的AppKey -->
+            <meta-data
+                android:name="EASEMOB_APPKEY"
+                android:value="1102190507222362#topeverycs" /> <!-- 声明SDK所需的service SDK核心功能 -->
+            <!-- <service -->
+            <!-- android:name="com.hyphenate.chat.EMChatService" -->
+            <!-- android:exported="true" /> -->
+            <service
+                android:name="com.amap.api.location.APSService"
+                android:exported="true" /> <!-- <service -->
+            <!-- android:name="com.hyphenate.chat.EMJobService" -->
+            <!-- android:exported="true" -->
+            <!-- android:permission="android.permission.BIND_JOB_SERVICE" /> &lt;!&ndash; 显示下载大图页面 &ndash;&gt; -->
+            <!-- <activity -->
+            <!-- android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity" -->
+            <!-- android:screenOrientation="portrait" -->
+            <!-- android:theme="@style/horizontal_slide" /> &lt;!&ndash; 下载文件 &ndash;&gt; -->
+            <!-- <activity -->
+            <!-- android:name="com.hyphenate.easeui.ui.EaseShowNormalFileActivity" -->
+            <!-- android:screenOrientation="portrait" -->
+            <!-- android:theme="@style/horizontal_slide" /> -->
+            <!-- <activity -->
+            <!-- android:name="com.hyphenate.easeui.ui.EaseShowVideoActivity" -->
+            <!-- android:screenOrientation="portrait" -->
+            <!-- android:theme="@style/horizontal_slide" -->
+            <!-- android:windowSoftInputMode="stateAlwaysHidden" /> &lt;!&ndash; Ding msg send activity &ndash;&gt; -->
+            <!-- <activity -->
+            <!-- android:name="com.hyphenate.easeui.ui.EaseDingMsgSendActivity" -->
+            <!-- android:screenOrientation="portrait" -->
+            <!-- android:theme="@style/horizontal_slide" -->
+            <!-- android:windowSoftInputMode="stateAlwaysHidden" /> &lt;!&ndash; Ding ack user list activity &ndash;&gt; -->
+            <!-- <activity -->
+            <!-- android:name="com.hyphenate.easeui.ui.EaseDingAckUserListActivity" -->
+            <!-- android:screenOrientation="portrait" -->
+            <!-- android:theme="@style/horizontal_slide" -->
+            <!-- android:windowSoftInputMode="stateAlwaysHidden" /> &lt;!&ndash; choose video &ndash;&gt; -->
+            <!-- <activity -->
+            <!-- android:name="com.hyphenate.easeui.ui.ImageGridActivity" -->
+            <!-- android:screenOrientation="portrait" -->
+            <!-- android:theme="@style/horizontal_slide" -->
+            <!-- android:windowSoftInputMode="stateAlwaysHidden" /> -->
+            <!-- <activity -->
+            <!-- android:name="com.hyphenate.easeui.ui.RecorderVideoActivity" -->
+            <!-- android:screenOrientation="portrait" -->
+            <!-- android:theme="@style/horizontal_slide" -->
+            <!-- android:windowSoftInputMode="stateAlwaysHidden" /> &lt;!&ndash; 语音通话 &ndash;&gt; -->
+            <!-- <activity -->
+            <!-- android:name="com.hyphenate.easeui.ui.VoiceCallActivity" -->
+            <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+            <!-- android:excludeFromRecents="true" -->
+            <!-- android:launchMode="singleTask" -->
+            <!-- android:screenOrientation="portrait" -->
+            <!-- android:theme="@style/horizontal_slide" /> &lt;!&ndash; 视频通话 &ndash;&gt; -->
+            <!-- <activity -->
+            <!-- android:name="com.hyphenate.easeui.ui.VideoCallActivity" -->
+            <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+            <!-- android:excludeFromRecents="true" -->
+            <!-- android:launchMode="singleTask" -->
+            <!-- android:screenOrientation="portrait" -->
+            <!-- android:theme="@style/horizontal_slide" /> &lt;!&ndash; 声明SDK所需的receiver &ndash;&gt; -->
+            <!-- <receiver android:name="com.hyphenate.chat.EMMonitorReceiver"> -->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.PACKAGE_REMOVED" /> -->
+            <!-- <data android:scheme="package" /> -->
+            <!-- </intent-filter> -->
+            <!-- &lt;!&ndash; 可选filter &ndash;&gt; -->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.BOOT_COMPLETED" /> -->
+            <!-- <action android:name="android.intent.action.USER_PRESENT" /> -->
+            <!-- </intent-filter> -->
+            <!-- </receiver> -->
+            <receiver android:name=".broadcast.HomeWatcherReceiver">
+                <intent-filter>
+                    <action android:name="android.intent.action.CLOSE_SYSTEM_DIALOGS" />
+                </intent-filter>
+            </receiver>
+
+            <activity android:name=".ui.OauthCodeActivity" />
+            <activity android:name=".ui.CameraActivity" />
+
+            <service
+                android:name=".service.CaseReportService"
+                android:enabled="true"
+                android:exported="true" />
+
+            <activity android:name=".ui.MsgListActivity" /> <!-- <activity android:name="com.tencent.liteav.demo.MainActivity"/> -->
+            <activity
+                android:name=".ui.GuideActivity"
+                android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+            <activity android:name=".ui.VerificationCodeLogin" />
+            <activity
+                android:name=".ui.AudioActivity"
+                android:label="音频录制" />
+            <activity android:name=".ui.UserInfoModifyActivity" />
+            <activity android:name=".ui.YqZHQKDayReportActivity" />
+            <activity
+                android:name=".ui.YqZHQKDayActivity"
+                android:label="场所人员每日健康情况" />
+            <activity android:name=".ui.YqReportNoteActivity" />
+            <activity
+                android:name=".ui.YqZHQKActivity"
+                android:label="综合上报" />
+            <activity
+                android:name=".ui.YqkdDayDetailsActivity"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:label="卡点涉疫人员/车辆检查" />
+            <activity android:name=".ui.CsDescActivity" />
+
+            <service android:name="com.zlw.main.recorderlib.recorder.RecordService" />
+        </application>
+
+    </manifest>

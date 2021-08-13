@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider"
+        android:showDividers="middle">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:divider="@drawable/input_divider"
+            android:showDividers="middle"
+            android:background="@drawable/bg_rect_white_normal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_horizontal"
+                android:paddingRight="@dimen/padding_horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/padding_horizontal"
+                    android:gravity="center|right"
+                    android:text="任务编号"
+                    android:textColor="@color/darken"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:id="@+id/tv_event_new_task_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColorHint="@color/text_hint"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_normal"
+                    android:background="@drawable/bg_text_editor"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_horizontal"
+                android:paddingRight="@dimen/padding_horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/padding_horizontal"
+                    android:gravity="center|right"
+                    android:text="任务名称"
+                    android:textColor="@color/darken"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:id="@+id/tv_event_new_task_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColorHint="@color/text_hint"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_normal"
+                    android:background="@drawable/bg_text_editor"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_horizontal"
+                android:paddingRight="@dimen/padding_horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/padding_horizontal"
+                    android:gravity="center|right"
+                    android:text="任务区域"
+                    android:textColor="@color/darken"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:id="@+id/tv_event_new_task_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColorHint="@color/text_hint"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_normal"
+                    android:background="@drawable/bg_text_editor"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_width" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:divider="@drawable/input_divider"
+            android:showDividers="middle"
+            android:background="@drawable/bg_rect_white_normal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_horizontal"
+                android:paddingRight="@dimen/padding_horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/padding_horizontal"
+                    android:gravity="center|right"
+                    android:text="任务类别"
+                    android:textColor="@color/darken"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <com.example.android_supervisor.ui.view.FocusedTextView
+                    android:id="@+id/tv_event_new_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:gravity="center_vertical"
+                    android:drawableRight="@drawable/enter"
+                    android:drawablePadding="10dp"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:hint="请选择"
+                    android:textColorHint="@color/text_hint"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_normal"
+                    android:background="@drawable/bg_text_editor_normal"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_horizontal"
+                android:paddingRight="@dimen/padding_horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/padding_horizontal"
+                    android:gravity="center|right"
+                    android:text="立案标准"
+                    android:textColor="@color/darken"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <com.example.android_supervisor.ui.view.FocusedTextView
+                    android:id="@+id/tv_event_new_standard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:drawableRight="@drawable/enter"
+                    android:drawablePadding="10dp"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:hint="请选择"
+                    android:textColorHint="@color/text_hint"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_normal"
+                    android:background="@drawable/bg_text_editor_normal"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_horizontal"
+                android:paddingRight="@dimen/padding_horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/padding_horizontal"
+                    android:gravity="center|right"
+                    android:text="事发位置"
+                    android:textColor="@color/darken"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <com.example.android_supervisor.ui.view.FocusedTextView
+                    android:id="@+id/tv_event_new_position"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:gravity="center_vertical"
+                    android:drawableRight="@drawable/enter"
+                    android:drawablePadding="10dp"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:hint="请选择"
+                    android:textColorHint="@color/text_hint"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_normal"
+                    android:background="@drawable/bg_text_editor_normal"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_horizontal"
+                android:paddingRight="@dimen/padding_horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/padding_horizontal"
+                    android:gravity="center|right"
+                    android:text="坐标信息"
+                    android:textColor="@color/darken"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <com.example.android_supervisor.ui.view.FocusedTextView
+                    android:id="@+id/tv_event_lng"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="10dp"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:hint="坐标"
+                    android:textColorHint="@color/text_hint"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_normal"
+                    android:background="@drawable/bg_text_editor_normal"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_horizontal"
+                android:paddingRight="@dimen/padding_horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/padding_horizontal"
+                    android:gravity="center|right"
+                    android:text="问题描述"
+                    android:textColor="@color/darken"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/et_event_new_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_text_editor"
+                        android:gravity="top"
+                        android:hint="请输入案件描述(1~200字)"
+                        android:lines="4"
+                        android:maxLength="200"
+                        android:maxLines="4"
+                        android:padding="8dp"
+                        android:textColor="@color/gray"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_character_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1-200"
+                        android:layout_gravity="right|bottom"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginRight="36dp"
+                        ></TextView>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/btn_event_new_desc_record"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="right|bottom"
+                        android:src="@drawable/ic_record"
+                        android:layout_margin="5dp"
+                        app:maxImageSize="14dp"
+                        app:fabCustomSize="24dp"
+                        app:tint="@color/white"
+                        app:backgroundTint="@color/blue" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.example.android_supervisor.ui.media.MediaUploadGridView
+            android:id="@+id/gv_event_new_attaches"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="@dimen/padding_vertical"
+            android:paddingBottom="@dimen/padding_vertical"
+            android:clipToPadding="false">
+
+            <Button
+                android:id="@+id/btn_event_new_submit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/button_round_blue"
+                android:text="提 交"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_large" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@android:id/icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="8dp"
+            tools:src="@drawable/ic_msg"
+            app:tint="@color/nav_item_color"/>
+
+        <TextView
+            android:id="@android:id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-8dp"
+            android:includeFontPadding="false"
+            tools:text="消息"
+            android:textSize="12sp"
+            android:textColor="@color/nav_item_color"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="28dp"
+        android:id="@+id/tv_msgCount"
+        android:background="@drawable/sms_tips"
+        android:textColor="#ffffff"
+        android:focusable="false"
+        android:text="11"
+        android:visibility="invisible"
+        android:clickable="false"
+        android:focusableInTouchMode="false"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+</RelativeLayout>

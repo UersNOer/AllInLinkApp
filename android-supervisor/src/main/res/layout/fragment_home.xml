@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_gray1"
+           >
+
+            <ImageView
+                android:id="@+id/iv_main_banner"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/bg_rect_blue_normal"
+                android:scaleType="centerCrop" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="120dp"
+                android:background="@color/background_gray1"
+                android:scaleType="centerCrop" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="10dp">
+
+                        <com.example.android_supervisor.ui.view.CircleImageView
+                            android:id="@+id/head_icon"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/mian_pep" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/bg_rect_white"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/padding_horizontal_padding"
+                            android:paddingRight="@dimen/padding_horizontal_padding">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                >
+                                <TextView
+                                    android:id="@+id/tv_home_user_role"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="监督员测试时是的"
+                                    android:textColor="@color/gray_dark"
+                                    android:layout_weight="1"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_home_user_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/blue"
+                                    android:textSize="14sp"
+                                    android:gravity="center_vertical"
+                                    tools:text="(杨杰)" />
+
+
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="end"
+                                android:layout_marginLeft="4dp"
+                                >
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/iv_home_gps_collect"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:background="#bababa"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="5dp"
+                                    android:padding="2.5dp"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/gps_none"
+                                    />
+
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/iv_home_gps"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:background="#bababa"
+                                    android:padding="2.5dp"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/ic_gps"
+                                    app:tint="@color/white" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/iv_home_gprs"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="5dp"
+                                    android:background="#bababa"
+                                    android:padding="2.5dp"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/ic_gprs"
+                                    app:tint="@color/white" />
+
+                            </LinearLayout>
+
+
+
+
+                            <!--                            <View-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_weight="1" />-->
+
+                            <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="月份："-->
+                            <!--android:textColor="@color/gray_dark"-->
+                            <!--android:textSize="14sp"/>-->
+
+                            <!--<TextView-->
+                            <!--android:id="@+id/tv_home_month"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--tools:text="2019年3月"-->
+                            <!--android:textColor="@color/blue"-->
+                            <!--android:textSize="14sp"/>-->
+
+
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rect_white"
+                        android:divider="@drawable/divider"
+                        android:orientation="vertical"
+                        android:showDividers="middle">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/padding_horizontal"
+                            android:paddingRight="@dimen/padding_horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="5dp"
+                                android:text="当日统计"
+                                android:textColor="@color/darken"
+                                android:textSize="14sp" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:id="@+id/tv_home_statistics_enter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="5dp"
+                                android:drawableRight="@drawable/enter"
+                                android:text="查看详情"
+                                android:textColor="@color/gray_light"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/padding_vertical"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="@dimen/padding_vertical">
+
+                            <LinearLayout
+                                android:id="@+id/ll_home_report_count"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_home_report_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:text="0"
+                                    android:textColor="@color/darken"
+                                    android:textSize="26sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="上报数"
+                                    android:textColor="@color/gray"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_home_hc_count"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_home_hc_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:text="0"
+                                    android:textColor="@color/darken"
+                                    android:textSize="26sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="核查数"
+                                    android:textColor="@color/gray"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_home_hs_count"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_home_hs_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:text="0"
+                                    android:textColor="@color/darken"
+                                    android:textSize="26sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="核实数"
+                                    android:textColor="@color/gray"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:background="@color/background_gray1"-->
+<!--            android:layout_height="10dp">-->
+<!--        </TextView>-->
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rect_white"
+            android:divider="@drawable/divider"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_horizontal"
+                android:paddingRight="@dimen/padding_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/title_tag"
+                    android:drawablePadding="5dp"
+                    android:text="系统功能"
+                    android:textStyle="bold"
+                    android:textColor="@color/darken"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:visibility="gone"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_vertical">
+
+                <TableRow>
+                    <LinearLayout
+                        android:id="@+id/grid_item_case_report"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/press_item_main"
+                        android:clickable="true"
+                        android:descendantFocusability="blocksDescendants"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle"
+                            android:clickable="false"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_home_ajsb"
+                            app:backgroundTint="#3ec6ff"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:clickable="false"
+                            android:text="案件上报"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/grid_item_fast_report"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/press_item_main"
+                        android:clickable="true"
+                        android:descendantFocusability="blocksDescendants"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/icon_fast_report"
+                            app:backgroundTint="#e3424e"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="快速上报"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/grid_item_my_task"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/press_item_main"
+                        android:clickable="true"
+                        android:descendantFocusability="blocksDescendants"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle"
+                            android:clickable="false"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_home_grrw"
+                            app:backgroundTint="#e87e8d"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="个人任务"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/grid_item_history"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/press_item_main"
+                        android:clickable="true"
+                        android:descendantFocusability="blocksDescendants"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_home_lsjl"
+                            app:backgroundTint="#84a7ff"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="历史记录"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="@dimen/margin_vertical">
+
+                    <LinearLayout
+                        android:id="@+id/grid_item_census_task"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:descendantFocusability="blocksDescendants"
+                        android:background="@drawable/press_item_main"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle"
+                            android:scaleType="centerInside"
+                            android:clickable="false"
+                            android:src="@drawable/ic_home_zxpc"
+                            app:backgroundTint="#46a2de"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="专项任务"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/grid_item_contacts"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@drawable/press_item_main"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_home_txl"
+                            app:backgroundTint="#fc7a5a"
+                            app:tint="@color/white" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="通讯录"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/grid_item_check_in"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@drawable/press_item_main"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_home_dk"
+                            app:backgroundTint="#9770cf"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="打卡"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/grid_item_commute_plan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@drawable/press_item_main"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_home_rckq"
+                            app:backgroundTint="#53b77b"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="日常考勤"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="@dimen/margin_vertical">
+
+
+
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--</LinearLayout>-->
+
+                    <LinearLayout
+                        android:id="@+id/tv_OfflineMap"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@drawable/press_item_main"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/sphy"
+
+                            app:backgroundTint="#46a2de"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="视频会议"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/tv_clock"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@drawable/press_item_main"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+
+                            android:layout_width="40dp"
+                            android:layout_height="43dp"
+                            android:background="@drawable/circle"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/sphy"
+                            app:backgroundTint="#46a2de"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="卡点功能"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        </LinearLayout>
+
+
+
+                </TableRow>
+            </TableLayout>
+
+            <com.example.android_supervisor.ui.view.NoScrollGridView
+                android:id="@+id/gv_menu_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:numColumns="3"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:stretchMode="columnWidth"
+                >
+            </com.example.android_supervisor.ui.view.NoScrollGridView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:visibility="gone"
+                android:id="@+id/recycler_menu_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_width" />
+
+        <LinearLayout
+            android:id="@+id/go2NewsDetailList"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_horizontal"
+            android:paddingRight="@dimen/padding_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/title_tag"
+                android:drawablePadding="5dp"
+                android:textStyle="bold"
+                android:text="实时新闻"
+                android:textColor="@color/darken"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/actual_news_enter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/enter"
+                android:textColor="@color/gray_light"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_width" />
+    </LinearLayout>
+
+
+</ScrollView>

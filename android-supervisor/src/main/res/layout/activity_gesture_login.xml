@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.andrognito.patternlockview.PatternLockView
+        android:id="@+id/gesture_login_lock_indicator"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="45dp"
+        app:normalStateColor="@color/blue"
+        app:correctStateColor="@color/text_green"
+        app:wrongStateColor="@color/text_red"
+        app:dotNormalSize="5dp"
+        app:dotSelectedSize="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_gesture_login_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        tools:text="请输入手势密码"
+        android:textSize="@dimen/text_size_normal"
+        android:textColor="@color/gray_light" />
+
+        <RelativeLayout
+            android:id="@+id/rl_gesture_login_password"
+            android:layout_width="260dp"
+            android:layout_height="40dp">
+
+            <EditText
+                android:id="@+id/et_gesture_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_text_editor"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:paddingRight="90dp"
+                android:singleLine="true"
+                android:maxLength="20"
+                android:textColor="@color/blue"
+                android:textColorHint="@color/text_hint"
+                android:textSize="@dimen/text_size_normal"
+                android:theme="@style/LoginEditTextStyle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_gesture_login_show_pwd"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="45dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_pwd_show"
+                app:tint="@color/gray_light"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_gesture_login_enter"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_rect_blue"
+                android:padding="12dp"
+                android:src="@drawable/enter"
+                app:tint="@color/white" />
+        </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_gesture_login_gesture"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.andrognito.patternlockview.PatternLockView
+            android:id="@+id/gesture_login_lock_view"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_gravity="center_horizontal"
+            app:normalStateColor="@color/blue"
+            app:correctStateColor="@color/text_green"
+            app:wrongStateColor="@color/text_red"
+            app:dotNormalSize="25dp"
+            app:dotSelectedSize="50dp"/>
+
+        <TextView
+            android:id="@+id/tv_gesture_login_forget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="忘记手势？"
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/text_blue" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_map_address_search"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardBackgroundColor="#eeffffff"
+        app:cardCornerRadius="5dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/et_map_address_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:singleLine="true"
+            android:paddingLeft="12dp"
+            android:paddingRight="50dp"
+            android:hint="搜索指定地址，例如：北京市"
+            android:drawableLeft="@drawable/ease_search_bar_icon_normal"
+            android:drawablePadding="5dp"
+            android:textColor="@color/darken"
+            android:textSize="@dimen/text_size_normal"
+            android:dropDownHeight="240dp"
+            android:background="@null"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_map_address_clear"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:src="@drawable/ease_search_clear"
+            android:scaleType="centerInside"
+            app:tint="@color/text_blue"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.tencent.tencentmap.mapsdk.maps.MapView
+        android:id="@+id/mapview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="50dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/btn_map_locate"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/button_map"
+            android:src="@drawable/map_nav" />
+
+        <ImageButton
+            android:id="@+id/btn_map_route"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_map"
+            android:src="@drawable/map_route"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/btn_map_zoom_in"
+            android:layout_width="45dip"
+            android:layout_height="41dip"
+            android:background="@drawable/button_map"
+            android:src="@drawable/map_zoomin" />
+
+        <ImageButton
+            android:id="@+id/btn_map_zoom_out"
+            android:layout_width="45dip"
+            android:layout_height="41dip"
+            android:background="@drawable/button_map"
+            android:src="@drawable/map_zoomout" />
+    </LinearLayout>
+</RelativeLayout>

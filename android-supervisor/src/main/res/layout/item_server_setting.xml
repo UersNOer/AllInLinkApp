@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_rect_white"
+    android:paddingBottom="@dimen/padding_vertical"
+    android:paddingLeft="@dimen/padding_horizontal"
+    android:paddingRight="@dimen/padding_horizontal"
+    android:paddingTop="@dimen/padding_vertical">
+
+    <TextView
+        android:id="@+id/tv_server_setting_http_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="基础平台服务"
+        android:textColor="@color/darken"
+        android:textSize="@dimen/text_size_large" />
+
+    <TextView
+        android:id="@+id/tv_server_setting_http"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:hint="没有设置"
+        android:textColor="@color/gray"
+        android:textColorHint="@color/text_hint"
+        android:textSize="@dimen/text_size_small" />
+</LinearLayout>

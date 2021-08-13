@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:scaleType="centerInside"
+        android:src="@drawable/ico_back"
+        android:tint="@color/blue" />
+
+    <FrameLayout
+       android:layout_width="200dp"
+       android:layout_height="200dp"
+       android:layout_marginTop="100dp"
+       android:layout_gravity="center_horizontal"
+      >
+
+       <TextureView
+           android:id="@+id/texture_preview"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent" />
+
+       <com.arcsoft.arcfacedemo.widget.FaceRectView
+           android:id="@+id/face_rect_view"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent" />
+   </FrameLayout>
+
+    <Switch
+        android:visibility="gone"
+        android:id="@+id/switch_liveness_detect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="20dp"
+        android:text="@string/liveness_detect" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="100dp"
+        android:background="@drawable/button_round_blue"
+        android:onClick="register"
+        android:padding="10dp"
+        android:text="注册人脸"
+        android:textColor="@android:color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/recycler_view_person"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</FrameLayout>

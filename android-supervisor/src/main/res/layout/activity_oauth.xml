@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/oauth_lin"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_height="40dp">
+        <EditText
+            android:id="@+id/et_oauth_code"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_text_editor"
+            android:hint="请输入授权码"
+            android:paddingLeft="55dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:maxLength="20"
+            android:textColor="@color/blue"
+            android:textColorHint="@color/text_hint"
+            android:textSize="@dimen/text_size_normal"
+            android:theme="@style/LoginEditTextStyle" />
+        <Button
+            android:id="@+id/btn_oauth"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/button_round_blue"
+            android:text="授 权"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_large" />
+    </LinearLayout>
+</LinearLayout>

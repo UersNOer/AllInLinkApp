@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="@dimen/padding_horizontal"
+    android:paddingRight="@dimen/padding_horizontal"
+    android:background="@drawable/bg_rect_white">
+
+    <RelativeLayout
+        android:layout_width="40dp"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/divider"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/flow_tag"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_task_flow_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            tools:text="【立案】2019-03-29 18:04:10"
+            android:textColor="@color/list_selector_blue_text2"
+            android:textSize="@dimen/text_size_small"/>
+
+        <TextView
+            android:id="@+id/tv_task_flow_role"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:singleLine="true"
+            tools:text="华强北街道执法队"
+            android:textColor="@color/list_selector_blue_text2"
+            android:textSize="@dimen/text_size_small"/>
+
+        <TextView
+            android:id="@+id/tv_task_flow_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:maxLines="2"
+            tools:text="处理意见：请尽快处理请尽快处理请尽快处理请尽快处理请尽快处理请尽快处理"
+            android:textColor="@color/list_selector_blue_text2"
+            android:textSize="@dimen/text_size_small"/>
+    </LinearLayout>
+</LinearLayout>

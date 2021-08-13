@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_audio_info_add">
+
+    <com.example.android_supervisor.ui.view.SquareImageView
+        android:id="@+id/iv_image_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:tint="#c2c2c2"
+        android:src="@drawable/ico_camera_fill"
+        android:scaleType="centerInside" />
+</FrameLayout>

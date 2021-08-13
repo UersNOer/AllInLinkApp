@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:divider="@drawable/divider"
+    android:showDividers="beginning|end">
+
+    <TextView
+        android:id="@android:id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:minLines="5"
+        android:lineSpacingMultiplier="1.2"
+        android:textColor="@color/gray"
+        android:textSize="15sp"
+        android:background="@color/white"/>
+</LinearLayout>
